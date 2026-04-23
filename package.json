@@ -1,0 +1,31 @@
+{
+  "name": "plataforma-jeo-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo para Plataforma JEO - Backend (NestJS) + Frontend (Next.js) + PostgreSQL",
+  "scripts": {
+    "dev": "pnpm --parallel -r run dev",
+    "dev:back": "pnpm --filter jeo-back run start:dev",
+    "dev:front": "pnpm --filter plataforma-jeo run dev",
+    "build": "pnpm -r run build",
+    "build:back": "pnpm --filter jeo-back run build",
+    "build:front": "pnpm --filter plataforma-jeo run build",
+    "lint": "pnpm -r run lint",
+    "test": "pnpm -r run test",
+    "db:generate": "pnpm --filter jeo-back run prisma:generate",
+    "db:migrate": "pnpm --filter jeo-back run prisma:migrate",
+    "db:migrate:dev": "pnpm --filter jeo-back run prisma:migrate:dev",
+    "db:studio": "pnpm --filter jeo-back run prisma:studio",
+    "db:seed": "pnpm --filter jeo-back run prisma:seed",
+    "db:push": "pnpm --filter jeo-back run prisma:push",
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down",
+    "docker:up:detached": "docker compose up --build -d",
+    "docker:logs": "docker compose logs -f",
+    "clean": "pnpm -r exec -- rm -rf node_modules dist .next && rm -rf node_modules"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}

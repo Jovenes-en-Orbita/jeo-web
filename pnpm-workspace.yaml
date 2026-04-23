@@ -1,0 +1,13 @@
+packages:
+  - jeo-back
+  - plataforma-jeo
+
+ignoredBuiltDependencies:
+  - sharp
+  - unrs-resolver
+
+onlyBuiltDependencies:
+  - '@nestjs/core'
+  - '@prisma/client'
+  - '@prisma/engines'
+  - prisma
