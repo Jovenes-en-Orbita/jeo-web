@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ── Cosmic Color Palette ── */
+  --color-space-black: #0a0a0f;
+  --color-space-dark: #0f0f1a;
+  --color-space-deep: #121225;
+  --color-nebula-purple: #6c3fa0;
+  --color-nebula-blue: #3b82f6;
+  --color-nebula-cyan: #22d3ee;
+  --color-star-gold: #f4c542;
+  --color-star-warm: #f59e0b;
+  --color-cosmic-white: #f0f0f5;
+  --color-cosmic-gray: #9ca3af;
+  --color-cosmic-muted: #6b7280;
+  --color-surface-dark: #141420;
+  --color-surface-card: #1a1a2e;
+  --color-surface-hover: #22223a;
+  --color-accent-glow: rgba(59, 130, 246, 0.15);
+
+  /* ── Typography ── */
+  --font-heading: var(--font-geist-sans), "Inter", system-ui, sans-serif;
+  --font-body: var(--font-geist-sans), "Inter", system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), "JetBrains Mono", monospace;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--color-space-black);
+  --color-foreground: var(--color-cosmic-white);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base Styles ── */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-space-black);
+  color: var(--color-cosmic-white);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar Styling ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-space-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-nebula-purple);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-nebula-blue);
+}
+
+/* ── Selection Color ── */
+::selection {
+  background: rgba(108, 63, 160, 0.4);
+  color: var(--color-cosmic-white);
+}
+
+/* ── Utility Animations ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.4); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease-out both;
 }
