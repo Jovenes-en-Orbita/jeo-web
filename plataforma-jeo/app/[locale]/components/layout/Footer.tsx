@@ -5,19 +5,27 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Send, Mail, User, MessageSquare, FileText } from "lucide-react";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
-const contactSchema = z.object({
-  nombre: z.string().min(2, "El nombre es requerido"),
-  apellido: z.string().min(2, "El apellido es requerido"),
-  email: z.string().email("Correo electrónico inválido"),
-  asunto: z.string().min(3, "El asunto es requerido"),
-  mensaje: z.string().min(10, "El mensaje debe tener al menos 10 caracteres"),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+type ContactFormData = {
+  nombre: string;
+  apellido: string;
+  email: string;
+  asunto: string;
+  mensaje: string;
+};
 
 export default function Footer() {
   const [submitted, setSubmitted] = useState(false);
+  const t = useTranslations("footer");
+
+  const contactSchema = z.object({
+    nombre: z.string().min(2, t("firstNameRequired")),
+    apellido: z.string().min(2, t("lastNameRequired")),
+    email: z.string().email(t("emailInvalid")),
+    asunto: z.string().min(3, t("subjectRequired")),
+    mensaje: z.string().min(10, t("messageMin")),
+  });
 
   const {
     register,
@@ -60,29 +68,15 @@ export default function Footer() {
           {/* Left: About Text */}
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-white mb-2">
-              UPT
+              JEO
             </h2>
             <div className="h-px w-full bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-transparent mb-8" />
 
             <div className="space-y-4 text-sm leading-relaxed text-white/60">
-              <p>
-                La página &quot;Universo para todos&quot; fue diseñada con el
-                propósito de enseñar al público sobre ciencia, específicamente en
-                el área del conocimiento sobre el cosmos, su composición, origen y
-                estructuras presentes en él. Aquí, encontrarás información vital
-                sobre gran cantidad de astros, desde su origen, evolución y fin de
-                su existencia, hasta de fenómenos presentes tanto en nuestra vida
-                cotidiana, como a miles de millones de años luz.
-              </p>
-              <p>
-                El sitio web fue creado para que sea una forma entretenida de
-                aprender sobre la naturaleza de todo lo que existió, existe y
-                existirá. Además, dispone de varias fuentes de información si le
-                interesa aprender en persona, sobre este campo de la ciencia.
-              </p>
+              <p>{t("aboutText1")}</p>
+              <p>{t("aboutText2")}</p>
               <p className="text-white/40 text-xs italic">
-                El dato astronómico se actualizará cada semana con información nueva
-                y variada.
+                {t("weeklyNote")}
               </p>
             </div>
           </div>
@@ -91,10 +85,10 @@ export default function Footer() {
           <div className="relative">
             <div className="rounded-2xl bg-white/[0.03] backdrop-blur-sm border border-white/10 p-6 lg:p-8">
               <h3 className="text-xl font-semibold text-white text-center mb-1">
-                Envíe su consulta
+                {t("formTitle")}
               </h3>
               <p className="text-xs text-white/40 text-center mb-6">
-                o reporte cualquier problema del sitio web
+                {t("formSubtitle")}
               </p>
 
               {submitted ? (
@@ -103,10 +97,10 @@ export default function Footer() {
                     <Send className="h-7 w-7 text-green-400" />
                   </div>
                   <p className="text-green-400 font-medium">
-                    ¡Mensaje enviado con éxito!
+                    {t("successMessage")}
                   </p>
                   <p className="text-white/40 text-sm mt-1">
-                    Responderemos a la brevedad.
+                    {t("successSubtext")}
                   </p>
                 </div>
               ) : (
@@ -121,7 +115,7 @@ export default function Footer() {
                         <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/20" />
                         <input
                           {...register("nombre")}
-                          placeholder="Nombre"
+                          placeholder={t("firstName")}
                           className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/5 border border-white/10 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:border-transparent transition"
                         />
                       </div>
@@ -136,7 +130,7 @@ export default function Footer() {
                         <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/20" />
                         <input
                           {...register("apellido")}
-                          placeholder="Apellido"
+                          placeholder={t("lastName")}
                           className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/5 border border-white/10 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:border-transparent transition"
                         />
                       </div>
@@ -154,7 +148,7 @@ export default function Footer() {
                       <input
                         {...register("email")}
                         type="email"
-                        placeholder="Correo electrónico"
+                        placeholder={t("email")}
                         className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/5 border border-white/10 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:border-transparent transition"
                       />
                     </div>
@@ -170,7 +164,7 @@ export default function Footer() {
                       <FileText className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/20" />
                       <input
                         {...register("asunto")}
-                        placeholder="Asunto"
+                        placeholder={t("subject")}
                         className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/5 border border-white/10 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:border-transparent transition"
                       />
                     </div>
@@ -187,7 +181,7 @@ export default function Footer() {
                       <textarea
                         {...register("mensaje")}
                         rows={4}
-                        placeholder="Mensaje"
+                        placeholder={t("message")}
                         className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/5 border border-white/10 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:border-transparent transition resize-none"
                       />
                     </div>
@@ -204,7 +198,7 @@ export default function Footer() {
                     className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-sm font-medium text-white hover:from-blue-500 hover:to-purple-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40"
                   >
                     <Send className="h-4 w-4" />
-                    {isSubmitting ? "Enviando..." : "Enviar"}
+                    {isSubmitting ? t("sending") : t("send")}
                   </button>
                 </form>
               )}
@@ -215,7 +209,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-16 pt-8 border-t border-white/5 text-center">
           <p className="text-xs text-white/30">
-            © {new Date().getFullYear()} Universo Para Todos. Hecho con ✦ para explorar el cosmos.
+            {t("copyright", { year: new Date().getFullYear() })}
           </p>
         </div>
       </div>

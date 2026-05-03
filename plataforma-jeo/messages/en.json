@@ -1,0 +1,217 @@
+{
+  "metadata": {
+    "title": "Jovenes en Orbita | Explore the Cosmos",
+    "titleTemplate": "%s | Jovenes en Orbita",
+    "description": "Discover the mysteries of the universe: from the composition of dark matter to constellations."
+  },
+  "nav": {
+    "info": "Information",
+    "structures": "Structures in the Universe",
+    "solarSystem": "Solar System",
+    "moons": "Moons",
+    "constellations": "Constellations",
+    "astronomicalData": "Astronomical Data",
+    "photoGallery": "Photo Gallery",
+    "keepExploring": "Keep Exploring",
+    "contact": "Contact",
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "title1": "UNIVERSE",
+    "title2": "FOR ALL",
+    "subtitle": "Explore the mysteries of the cosmos, from the smallest particles to the largest structures in the universe.",
+    "discover": "Discover",
+    "cosmosView": "Cosmos view",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "universe": {
+    "badge": "Origin of the cosmos",
+    "title": "The Universe 13.8 billion",
+    "titleBreak": "years ago",
+    "subtitle": "How did everything that exists come to be?",
+    "description": "The Big Bang is the most widely accepted cosmological theory about the origin of the universe. Approximately 13.8 billion years ago, all matter, energy, space, and time began to expand from an extremely dense and hot state, giving rise to everything we know.",
+    "discoverMore": "Discover more",
+    "imageAlt": "Stars in deep space"
+  },
+  "matter": {
+    "badge": "Composition",
+    "title": "What is the Universe made of?",
+    "structuresTitle": "Structures in the Universe",
+    "spectrum": "Electromagnetic Spectrum",
+    "gravitationalWaves": "Gravitational Waves",
+    "radio": "Radio",
+    "microwave": "Microwave",
+    "infrared": "Infrared",
+    "visibleLight": "Visible Light",
+    "ultraviolet": "Ultraviolet",
+    "xRays": "X-Rays",
+    "gammaRays": "Gamma Rays",
+    "darkEnergyTitle": "Dark Energy",
+    "darkEnergyDesc": "A mysterious form of energy that makes up approximately 68% of the universe and is responsible for the accelerated expansion of the cosmos.",
+    "darkMatterTitle": "Dark Matter",
+    "darkMatterDesc": "Invisible matter that neither emits nor absorbs light. It makes up 27% of the universe and its presence is detected by its gravitational effects.",
+    "antimatterTitle": "Antimatter",
+    "antimatterDesc": "Matter composed of antiparticles, which have the same mass but opposite charge to normal particles. Its contact with matter produces annihilation.",
+    "baryonicTitle": "Baryonic Matter",
+    "baryonicDesc": "The ordinary matter that makes up everything visible: stars, planets, and ourselves. It represents only 5% of the universe.",
+    "lightTitle": "Light",
+    "lightDesc": "Visible electromagnetic radiation that travels at 299,792 km/s. It is our main tool for observing and understanding the universe."
+  },
+  "planets": {
+    "title": "Solar System",
+    "subtitle": "Our cosmic neighborhood: eight unique planets orbiting our star, the Sun.",
+    "mercury": "Mercury",
+    "venus": "Venus",
+    "earth": "Earth",
+    "mars": "Mars",
+    "jupiter": "Jupiter",
+    "saturn": "Saturn",
+    "uranus": "Uranus",
+    "neptune": "Neptune"
+  },
+  "moonSection": {
+    "title": "The 5 Largest Moons in the Solar System",
+    "subtitle": "Fascinating natural satellites orbiting the gas giants and our own planet.",
+    "ganymede": "Ganymede",
+    "titan": "Titan",
+    "callisto": "Callisto",
+    "io": "Io",
+    "theMoon": "The Moon"
+  },
+  "constellationSection": {
+    "title": "Constellations",
+    "description": "In order to easily identify the seasons and recognize both the movements and positions of celestial bodies observed in the sky, ancient astronomers created drawings based on human, animal, and object shapes, formed by connecting nearby stars in the sky; these were named constellations.",
+    "explore": "Explore constellations"
+  },
+  "astronomicalFact": {
+    "science": "Science",
+    "astronomy": "Astronomy",
+    "curiosities": "Curiosities",
+    "weeklyTitle": "Astronomical Fact of the Week",
+    "imageCaption": "Image of Earth captured from 6 billion kilometers away",
+    "description": "Human beings are very curious; it is part of our nature, and to a large extent this curiosity has brought us to where we are today. Scientists around the world work hard to understand the phenomena that surround us in the Universe, and that is why new advances and notable discoveries in the field of astronomy constantly emerge.",
+    "moreInfo": "More information",
+    "publishDate": "Publication date: 2/6/2024"
+  },
+  "gallery": {
+    "title": "Astronomical Photo Gallery",
+    "description": "Major space agencies such as NASA and ESA, with the support of hundreds and even thousands of people and institutions around the world, have managed to create enormous and powerful telescopes, with \"James Webb\" currently being the most powerful ever created. They amaze us with spectacular high-resolution images of various structures present in the cosmos.",
+    "viewFull": "View full gallery",
+    "telescopeAlt": "Space telescope"
+  },
+  "explore": {
+    "moreInfo": "More information",
+    "keepExploring": "Keep Exploring...",
+    "sky": "Discover the Sky",
+    "argentina": "Argentina in Space",
+    "learn": "Learn",
+    "olympics": "Olympics"
+  },
+  "footer": {
+    "aboutText1": "The \"Jovenes en Orbita\" website was designed to teach the public about science, specifically in the area of knowledge about the cosmos, its composition, origin, and structures present in it. Here, you will find vital information about a wide variety of celestial bodies, from their origin, evolution, and end of their existence, to phenomena present both in our daily lives and billions of light-years away.",
+    "aboutText2": "The website was created to be an entertaining way to learn about the nature of everything that existed, exists, and will exist. It also provides several sources of information if you are interested in learning in person about this field of science.",
+    "weeklyNote": "The astronomical fact will be updated every week with new and varied information.",
+    "formTitle": "Send your inquiry",
+    "formSubtitle": "or report any website issues",
+    "successMessage": "Message sent successfully!",
+    "successSubtext": "We will respond shortly.",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "sending": "Sending...",
+    "send": "Send",
+    "copyright": "© {year} Jovenes en Orbita. Made with ✦ to explore the cosmos.",
+    "firstNameRequired": "First name is required",
+    "lastNameRequired": "Last name is required",
+    "emailInvalid": "Invalid email address",
+    "subjectRequired": "Subject is required",
+    "messageMin": "Message must be at least 10 characters"
+  },
+  "structuresPage": {
+    "metaTitle": "Structures in the Universe",
+    "metaDescription": "Discover the main structures of the cosmos: from galaxy superclusters to comets and meteoroids.",
+    "backHome": "← Back to home",
+    "title": "Structures in the Universe",
+    "subtitle": "The universe contains an amazing variety of structures, from the largest such as galaxy superclusters, to the smallest such as meteoroids. Explore each one of them.",
+    "readMore": "Read more →",
+    "items": {
+      "superclusters": {
+        "title": "Superclusters",
+        "description": "Superclusters are one of the largest structures in the universe. They are large groupings of galaxy clusters formed by hundreds of galaxies that interact gravitationally, spanning millions of light-years."
+      },
+      "galaxyClusters": {
+        "title": "Galaxy Clusters",
+        "description": "Groupings of tens, or even hundreds of galaxies that interact gravitationally with each other. Also composed of large clouds of hot gas, although most of their mass is dark matter."
+      },
+      "galaxies": {
+        "title": "Galaxies",
+        "description": "Galaxies are the largest collections of stars in the universe. In one, hundreds of millions of stars are bound together by gravitational attraction."
+      },
+      "nebulae": {
+        "title": "Nebulae",
+        "description": "Nebulae are large accumulations of gas and dust scattered throughout practically all of interstellar space."
+      },
+      "starClusters": {
+        "title": "Star Clusters",
+        "description": "Star clusters are gigantic groupings of stars attracted to each other by their mutual gravitational pull."
+      },
+      "stars": {
+        "title": "Stars",
+        "description": "Stars are enormous spheres of gas that use various chemical elements to release energy and heat through nuclear reactions."
+      },
+      "neutronStars": {
+        "title": "Neutron Stars",
+        "description": "Neutron stars are stellar remnants that have reached the end of their evolutionary journey through space and time."
+      },
+      "blackHoles": {
+        "title": "Black Holes",
+        "description": "Black holes are the cold remnants of ancient stars, so dense that no material particle, not even light, can escape their powerful gravitational pull."
+      },
+      "planetarySystems": {
+        "title": "Planetary Systems",
+        "description": "Planetary systems are collections of celestial bodies, formed by one or more central stars and smaller bodies that orbit around them due to gravity."
+      },
+      "planets": {
+        "title": "Planets",
+        "description": "Planets are bodies that commonly orbit a star, have a spherical shape, and reflect light."
+      },
+      "asteroids": {
+        "title": "Asteroids",
+        "description": "Asteroids are primarily irregularly shaped rocky masses or interplanetary debris, ranging from a few meters to hundreds of kilometers in diameter."
+      },
+      "comets": {
+        "title": "Comets",
+        "description": "Comets, like asteroids, are interplanetary debris. Rocky and icy remnants from the formation of the Solar System."
+      },
+      "meteoroids": {
+        "title": "Meteoroids, Meteorites, and Meteors",
+        "description": "What is the difference between these similar and frequently confused concepts today?"
+      }
+    }
+  },
+  "datoPage": {
+    "metaTitle": "Astronomical Fact of the Week",
+    "metaDescription": "Facts, curiosities, and astronomical discoveries of the last century.",
+    "backHome": "← Back to home",
+    "galleryBadge": "Gallery",
+    "science": "Science",
+    "astronomy": "Astronomy",
+    "title": "Astronomical facts and discoveries of the last century",
+    "intro": "Human beings are very curious; it is part of our nature, and to a large extent this curiosity has brought us to where we are today. Be that as it may, here we have some answers to the big questions...",
+    "quoteAuthor": "\"Doctor Fission\"",
+    "mainImageAlt": "Galaxy cluster",
+    "articleTitle": "A hundred exoplanets float freely in the Milky Way",
+    "articleSubtitle": "Scientists from the Center for Astrobiology (CSIC-INTA) have observed that in one of the nearest star-forming regions, Upper Scorpius, one of the largest populations of rogue planets discovered to date can be found. They do not orbit stars, but instead wander through that area of the Milky Way.",
+    "articleImageAlt": "Pale Blue Dot - Earth seen from 6 billion km",
+    "articleBody": "The Universe can be a tremendously threatening place when we consider the fragility of our fragile and lonely blue world. Black holes, supernova explosions, gamma-ray bursts, asteroids, or our own star, the Sun, are just some of the threats that could wipe out the trace of our species in one fell swoop and forever. Each new discovery we make about the cosmos puts us in a better position to understand our place in it. Scientists around the world work hard to understand the phenomena that surround us in the Universe, and that is why here we show some of the most notable advances made in the field of astronomy."
+  },
+  "languageSwitcher": {
+    "label": "Switch language"
+  }
+}

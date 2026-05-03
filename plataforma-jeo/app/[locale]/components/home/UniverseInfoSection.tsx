@@ -1,7 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function UniverseInfoSection() {
+  const t = useTranslations("universe");
+
   return (
     <section
       id="info-universo"
@@ -11,29 +14,26 @@ export default function UniverseInfoSection() {
         {/* Text */}
         <div className="animate-fade-in-up">
           <span className="inline-block text-[10px] tracking-[0.3em] uppercase text-blue-400 font-medium mb-4 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5">
-            Origen del cosmos
+            {t("badge")}
           </span>
           <Link href="/universo">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight hover:text-blue-300 transition-colors">
-              El Universo hace 13.800
+              {t("title")}
               <br />
-              millones de años
+              {t("titleBreak")}
             </h2>
           </Link>
           <h3 className="mt-4 text-lg text-white/50 font-light">
-            ¿Cómo surgió todo lo que existe?
+            {t("subtitle")}
           </h3>
           <p className="mt-6 text-white/60 leading-relaxed">
-            El Big Bang es la teoría cosmológica más aceptada sobre el origen del
-            universo. Hace aproximadamente 13.800 millones de años, toda la materia,
-            energía, espacio y tiempo comenzaron a expandirse a partir de un estado
-            de densidad y temperatura extremas, dando lugar a todo lo que conocemos.
+            {t("description")}
           </p>
           <Link
             href="/universo"
             className="inline-flex items-center gap-2 mt-8 text-sm font-medium text-blue-400 hover:text-blue-300 group transition-colors"
           >
-            Descubrir más
+            {t("discoverMore")}
             <span className="inline-block transition-transform group-hover:translate-x-1">
               →
             </span>
@@ -46,7 +46,7 @@ export default function UniverseInfoSection() {
           <div className="relative overflow-hidden rounded-2xl border border-white/10">
             <Image
               src="https://i.ibb.co/LrShG6B/desktop-wallpaper-stars-in-space-background-real-space.jpg"
-              alt="Estrellas en el espacio profundo"
+              alt={t("imageAlt")}
               width={650}
               height={450}
               className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"

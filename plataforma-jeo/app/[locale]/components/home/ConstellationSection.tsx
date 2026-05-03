@@ -1,6 +1,9 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function ConstellationSection() {
+  const t = useTranslations("constellationSection");
+
   return (
     <section
       id="constelaciones"
@@ -19,21 +22,17 @@ export default function ConstellationSection() {
       <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
         <Link href="/constelaciones">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white hover:text-cyan-300 transition-colors">
-            Constelaciones
+            {t("title")}
           </h2>
         </Link>
         <p className="mt-6 text-white/60 max-w-3xl leading-relaxed text-base sm:text-lg">
-          Con el objetivo de identificar las estaciones fácilmente y reconocer
-          tanto los movimientos como las posiciones de los astros observados en el
-          cielo, los antiguos astrónomos crearon dibujos, basados en formas
-          humanas, animales y de objetos, formados al conectar estrellas cercanas
-          en el cielo; estas recibieron el nombre de constelaciones.
+          {t("description")}
         </p>
         <Link
           href="/constelaciones"
           className="inline-flex items-center gap-2 mt-8 text-sm font-medium text-cyan-400 hover:text-cyan-300 group transition-colors"
         >
-          Explorar constelaciones
+          {t("explore")}
           <span className="inline-block transition-transform group-hover:translate-x-1">
             →
           </span>

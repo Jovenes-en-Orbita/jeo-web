@@ -1,15 +1,47 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { structures } from "@/app/data/structures";
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Estructuras en el Universo",
-  description:
-    "Descubrí las principales estructuras del cosmos: desde supercúmulos de galaxias hasta cometas y meteoroides. Información detallada sobre cada tipo de estructura celeste.",
-};
+const structureKeys = [
+  "superclusters",
+  "galaxyClusters",
+  "galaxies",
+  "nebulae",
+  "starClusters",
+  "stars",
+  "neutronStars",
+  "blackHoles",
+  "planetarySystems",
+  "planets",
+  "asteroids",
+  "comets",
+  "meteoroids",
+] as const;
 
-export default function EstructurasPage() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "structuresPage" });
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+  };
+}
+
+export default async function EstructurasPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("structuresPage");
+
   return (
     <div className="max-w-5xl mx-auto px-4 lg:px-8 py-16 lg:py-24">
       {/* Header */}
@@ -18,15 +50,13 @@ export default function EstructurasPage() {
           href="/"
           className="inline-flex items-center gap-2 text-xs text-white/30 hover:text-white/60 transition-colors mb-8"
         >
-          ← Volver al inicio
+          {t("backHome")}
         </Link>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-          Estructuras en el Universo
+          {t("title")}
         </h1>
         <p className="mt-4 text-white/50 max-w-2xl leading-relaxed">
-          El universo contiene una variedad asombrosa de estructuras, desde las
-          más grandes como supercúmulos de galaxias, hasta las más pequeñas como
-          meteoroides. Explorá cada una de ellas.
+          {t("subtitle")}
         </p>
       </div>
 
@@ -42,7 +72,7 @@ export default function EstructurasPage() {
             <div className="relative w-full sm:w-48 h-36 flex-shrink-0 rounded-xl overflow-hidden">
               <Image
                 src={structure.image}
-                alt={structure.title}
+                alt={structureKeys[i] ? t(`items.${structureKeys[i]}.title` as const) : structure.title}
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
                 sizes="(max-width: 640px) 100vw, 192px"
@@ -60,14 +90,14 @@ export default function EstructurasPage() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h2 className="text-lg sm:text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
-                  {structure.title}
+                  {structureKeys[i] ? t(`items.${structureKeys[i]}.title` as const) : structure.title}
                 </h2>
               </div>
               <p className="text-sm text-white/40 leading-relaxed">
-                {structure.description}
+                {structureKeys[i] ? t(`items.${structureKeys[i]}.description` as const) : structure.description}
               </p>
               <span className="inline-flex items-center gap-1 mt-3 text-xs font-medium text-blue-400/60 group-hover:text-blue-400 transition-colors">
-                Leer más →
+                {t("readMore")}
               </span>
             </div>
           </Link>

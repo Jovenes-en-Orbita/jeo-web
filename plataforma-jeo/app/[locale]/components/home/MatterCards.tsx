@@ -1,8 +1,20 @@
 import Image from "next/image";
-import Link from "next/link";
-import { matterTypes } from "@/app/data/home";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
+
+const matterKeys = [
+  { key: "darkEnergy", image: "https://i.postimg.cc/qMZBG7wk/25400.png", href: "/materia/energia-oscura" },
+  { key: "darkMatter", image: "https://i.postimg.cc/XGGzsgbh/ZMXJ3-OYEZRDYTEVV7-OOCWGCOKU.png", href: "/materia/materia-oscura" },
+  { key: "antimatter", image: "https://i.postimg.cc/G2sg6Xw7/Capturaant.png", href: "/materia/antimateria" },
+  { key: "baryonic", image: "https://i.postimg.cc/hvFWkPdP/mbarionica.png", href: "/materia/materia-barionica" },
+  { key: "light", image: "https://i.postimg.cc/ppq3Xrqs/luz.jpg", href: "/materia/la-luz" },
+] as const;
+
+const spectrumKeys = ["radio", "microwave", "infrared", "visibleLight", "ultraviolet", "xRays", "gammaRays"] as const;
 
 export default function MatterCards() {
+  const t = useTranslations("matter");
+
   return (
     <section className="relative py-20 lg:py-28 bg-[#0a0a0f]">
       {/* Background subtle grid */}
@@ -13,16 +25,16 @@ export default function MatterCards() {
           {/* Left: Matter Cards */}
           <div>
             <span className="inline-block text-[10px] tracking-[0.3em] uppercase text-purple-400 font-medium mb-4 px-3 py-1 rounded-full border border-purple-500/20 bg-purple-500/5">
-              Composición
+              {t("badge")}
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">
-              ¿De qué está hecho el Universo?
+              {t("title")}
             </h2>
 
             <div className="space-y-4">
-              {matterTypes.map((matter, i) => (
+              {matterKeys.map((matter, i) => (
                 <Link
-                  key={matter.title}
+                  key={matter.key}
                   href={matter.href}
                   className="group flex items-start gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-300"
                   style={{ animationDelay: `${i * 100}ms` }}
@@ -30,7 +42,7 @@ export default function MatterCards() {
                   <div className="relative h-16 w-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-white/5 group-hover:ring-purple-500/30 transition-all">
                     <Image
                       src={matter.image}
-                      alt={matter.title}
+                      alt={t(`${matter.key}Title`)}
                       fill
                       className="object-cover"
                       sizes="64px"
@@ -38,10 +50,10 @@ export default function MatterCards() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-sm font-semibold text-white/90 group-hover:text-purple-300 transition-colors">
-                      {matter.title}
+                      {t(`${matter.key}Title`)}
                     </h4>
                     <p className="mt-1 text-xs text-white/40 leading-relaxed line-clamp-2">
-                      {matter.description}
+                      {t(`${matter.key}Desc`)}
                     </p>
                   </div>
                   <span className="text-white/20 group-hover:text-white/50 transition-colors text-lg flex-shrink-0 mt-2">
@@ -58,7 +70,7 @@ export default function MatterCards() {
             <Link href="/estructuras" className="group block relative overflow-hidden rounded-2xl border border-white/5">
               <Image
                 src="https://i.postimg.cc/pX1SPqD0/Optimismo-moderado-en-la-astronomia-espanola.jpg"
-                alt="Estructuras en el Universo"
+                alt={t("structuresTitle")}
                 width={600}
                 height={340}
                 className="w-full h-56 object-cover brightness-50 group-hover:brightness-60 group-hover:scale-105 transition-all duration-500"
@@ -66,7 +78,7 @@ export default function MatterCards() {
               />
               <div className="absolute inset-0 flex items-end p-6">
                 <h3 className="text-xl font-bold text-white tracking-wide uppercase">
-                  Estructuras en el Universo
+                  {t("structuresTitle")}
                 </h3>
               </div>
             </Link>
@@ -74,12 +86,12 @@ export default function MatterCards() {
             {/* Spectrum */}
             <div className="rounded-2xl bg-white/[0.02] border border-white/5 p-6">
               <h3 className="text-lg font-bold text-white mb-4">
-                Espectro Electromagnético
+                {t("spectrum")}
               </h3>
               <div className="relative overflow-hidden rounded-lg mb-4">
                 <Image
                   src="https://i.ibb.co/WWbfRKYH/Captura-de-pantalla-2025-12-23-014856.png"
-                  alt="Espectro electromagnético"
+                  alt={t("spectrum")}
                   width={600}
                   height={120}
                   className="w-full h-auto brightness-90"
@@ -87,16 +99,14 @@ export default function MatterCards() {
                 />
               </div>
               <div className="flex flex-wrap gap-2">
-                {["Radio", "Microondas", "Infrarrojo", "Luz Visible", "Ultravioleta", "Rayos X", "Rayos Gamma"].map(
-                  (type) => (
-                    <span
-                      key={type}
-                      className="px-3 py-1.5 text-[10px] font-semibold tracking-wider uppercase rounded-full border border-yellow-500/20 bg-yellow-500/5 text-yellow-300/80 hover:bg-yellow-500/10 hover:text-yellow-200 cursor-pointer transition-colors"
-                    >
-                      {type}
-                    </span>
-                  )
-                )}
+                {spectrumKeys.map((key) => (
+                  <span
+                    key={key}
+                    className="px-3 py-1.5 text-[10px] font-semibold tracking-wider uppercase rounded-full border border-yellow-500/20 bg-yellow-500/5 text-yellow-300/80 hover:bg-yellow-500/10 hover:text-yellow-200 cursor-pointer transition-colors"
+                  >
+                    {t(key)}
+                  </span>
+                ))}
               </div>
             </div>
 
@@ -104,7 +114,7 @@ export default function MatterCards() {
             <Link href="/ondas-gravitacionales" className="group block relative overflow-hidden rounded-2xl border border-white/5">
               <Image
                 src="https://i.postimg.cc/w3Ks1ZdH/Merging-black-holes-pillars.jpg"
-                alt="Ondas Gravitacionales"
+                alt={t("gravitationalWaves")}
                 width={600}
                 height={340}
                 className="w-full h-48 object-cover brightness-50 group-hover:brightness-60 group-hover:scale-105 transition-all duration-500"
@@ -112,7 +122,7 @@ export default function MatterCards() {
               />
               <div className="absolute inset-0 flex items-end p-6">
                 <h3 className="text-xl font-bold text-white tracking-wide uppercase">
-                  Ondas Gravitacionales
+                  {t("gravitationalWaves")}
                 </h3>
               </div>
             </Link>

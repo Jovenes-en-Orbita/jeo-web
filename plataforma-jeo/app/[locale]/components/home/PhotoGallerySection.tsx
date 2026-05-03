@@ -1,8 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { telescopeImages } from "@/app/data/home";
+import { useTranslations } from "next-intl";
 
 export default function PhotoGallerySection() {
+  const t = useTranslations("gallery");
+
   return (
     <section
       id="galeria"
@@ -23,22 +26,17 @@ export default function PhotoGallerySection() {
           <div>
             <Link href="/galeria">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white hover:text-cyan-300 transition-colors leading-tight">
-                Galería fotos astronómicas
+                {t("title")}
               </h2>
             </Link>
             <p className="mt-6 text-white/50 leading-relaxed text-sm sm:text-base">
-              Grandes agencias espaciales como la NASA y ESA, con el apoyo de
-              cientos e incluso miles de personas e instituciones alrededor del
-              mundo, han logrado crear enormes y poderosos telescopios, siendo
-              actualmente &quot;James Webb&quot; el más potente jamás creado. Los
-              cuales nos sorprenden con espectaculares imágenes de alta resolución
-              de diversas estructuras presentes en el cosmos.
+              {t("description")}
             </p>
             <Link
               href="/galeria"
               className="inline-flex items-center gap-2 mt-8 text-sm font-medium text-cyan-400 hover:text-cyan-300 group transition-colors"
             >
-              Ver galería completa
+              {t("viewFull")}
               <span className="inline-block transition-transform group-hover:translate-x-1">
                 →
               </span>
@@ -54,7 +52,7 @@ export default function PhotoGallerySection() {
               >
                 <Image
                   src={src}
-                  alt={`Telescopio espacial ${i + 1}`}
+                  alt={`${t("telescopeAlt")} ${i + 1}`}
                   width={400}
                   height={250}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"

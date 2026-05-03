@@ -1,3 +1,4 @@
+import { setRequestLocale } from "next-intl/server";
 import HeroSlider from "./components/home/HeroSlider";
 import UniverseInfoSection from "./components/home/UniverseInfoSection";
 import MatterCards from "./components/home/MatterCards";
@@ -8,11 +9,17 @@ import AstronomicalFactCard from "./components/home/AstronomicalFactCard";
 import PhotoGallerySection from "./components/home/PhotoGallerySection";
 import ExploreMoreCards from "./components/home/ExploreMoreCards";
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <HeroSlider />
-      {/* TODO: Hacer una sección de newsletter */}
       <UniverseInfoSection />
       <MatterCards />
       <PlanetGrid />

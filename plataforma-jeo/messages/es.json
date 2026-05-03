@@ -1,0 +1,217 @@
+{
+  "metadata": {
+    "title": "Jovenes en Orbita | Explorá el Cosmos",
+    "titleTemplate": "%s | Jovenes en Orbita",
+    "description": "Descubrí los misterios del universo: desde la composición de la materia oscura hasta las constelaciones."
+  },
+  "nav": {
+    "info": "Información",
+    "structures": "Estructuras en el Universo",
+    "solarSystem": "Sistema Solar",
+    "moons": "Lunas",
+    "constellations": "Constelaciones",
+    "astronomicalData": "Datos astronómicos",
+    "photoGallery": "Galería de fotos",
+    "keepExploring": "Seguir Explorando",
+    "contact": "Contacto",
+    "mainNav": "Navegación principal",
+    "mobileNav": "Navegación móvil",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "hero": {
+    "title1": "UNIVERSO",
+    "title2": "PARA TODOS",
+    "subtitle": "Explorá los misterios del cosmos, desde las partículas más pequeñas hasta las estructuras más grandes del universo.",
+    "discover": "Descubrir",
+    "cosmosView": "Vista del cosmos",
+    "previous": "Anterior",
+    "next": "Siguiente"
+  },
+  "universe": {
+    "badge": "Origen del cosmos",
+    "title": "El Universo hace 13.800",
+    "titleBreak": "millones de años",
+    "subtitle": "¿Cómo surgió todo lo que existe?",
+    "description": "El Big Bang es la teoría cosmológica más aceptada sobre el origen del universo. Hace aproximadamente 13.800 millones de años, toda la materia, energía, espacio y tiempo comenzaron a expandirse a partir de un estado de densidad y temperatura extremas, dando lugar a todo lo que conocemos.",
+    "discoverMore": "Descubrir más",
+    "imageAlt": "Estrellas en el espacio profundo"
+  },
+  "matter": {
+    "badge": "Composición",
+    "title": "¿De qué está hecho el Universo?",
+    "structuresTitle": "Estructuras en el Universo",
+    "spectrum": "Espectro Electromagnético",
+    "gravitationalWaves": "Ondas Gravitacionales",
+    "radio": "Radio",
+    "microwave": "Microondas",
+    "infrared": "Infrarrojo",
+    "visibleLight": "Luz Visible",
+    "ultraviolet": "Ultravioleta",
+    "xRays": "Rayos X",
+    "gammaRays": "Rayos Gamma",
+    "darkEnergyTitle": "Energía Oscura",
+    "darkEnergyDesc": "Forma misteriosa de energía que constituye aproximadamente el 68% del universo y es responsable de la expansión acelerada del cosmos.",
+    "darkMatterTitle": "Materia Oscura",
+    "darkMatterDesc": "Materia invisible que no emite ni absorbe luz. Constituye el 27% del universo y su presencia se detecta por sus efectos gravitacionales.",
+    "antimatterTitle": "Antimateria",
+    "antimatterDesc": "Materia compuesta por antipartículas, que poseen la misma masa pero carga opuesta a las partículas normales. Su contacto con la materia produce aniquilación.",
+    "baryonicTitle": "Materia Bariónica",
+    "baryonicDesc": "La materia ordinaria que compone todo lo visible: estrellas, planetas y nosotros mismos. Representa solo el 5% del universo.",
+    "lightTitle": "La Luz",
+    "lightDesc": "Radiación electromagnética visible que viaja a 299.792 km/s. Es nuestra principal herramienta para observar y comprender el universo."
+  },
+  "planets": {
+    "title": "Sistema Solar",
+    "subtitle": "Nuestro vecindario cósmico: ocho planetas únicos que orbitan nuestra estrella, el Sol.",
+    "mercury": "Mercurio",
+    "venus": "Venus",
+    "earth": "La Tierra",
+    "mars": "Marte",
+    "jupiter": "Júpiter",
+    "saturn": "Saturno",
+    "uranus": "Urano",
+    "neptune": "Neptuno"
+  },
+  "moonSection": {
+    "title": "Las 5 Lunas más grandes del Sistema Solar",
+    "subtitle": "Satélites naturales fascinantes que orbitan los gigantes gaseosos y nuestro propio planeta.",
+    "ganymede": "Ganímedes",
+    "titan": "Titán",
+    "callisto": "Calisto",
+    "io": "Ío",
+    "theMoon": "La Luna"
+  },
+  "constellationSection": {
+    "title": "Constelaciones",
+    "description": "Con el objetivo de identificar las estaciones fácilmente y reconocer tanto los movimientos como las posiciones de los astros observados en el cielo, los antiguos astrónomos crearon dibujos, basados en formas humanas, animales y de objetos, formados al conectar estrellas cercanas en el cielo; estas recibieron el nombre de constelaciones.",
+    "explore": "Explorar constelaciones"
+  },
+  "astronomicalFact": {
+    "science": "Ciencia",
+    "astronomy": "Astronomía",
+    "curiosities": "Curiosidades",
+    "weeklyTitle": "Dato Astronómico de la Semana",
+    "imageCaption": "Imagen de la Tierra capturada a 6.000 millones de kilómetros de distancia",
+    "description": "El ser humano es muy curioso; es parte de nuestra naturaleza, y en gran medida esta curiosidad nos ha hecho llegar hasta donde estamos hoy. Los científicos de todo el mundo trabajan con empeño para comprender los fenómenos que nos rodean en el Universo, y es por ello que constantemente surgen nuevos avances y descubrimientos destacados en el ámbito de la astronomía.",
+    "moreInfo": "Más información",
+    "publishDate": "Fecha de publicación: 6/2/2024"
+  },
+  "gallery": {
+    "title": "Galería fotos astronómicas",
+    "description": "Grandes agencias espaciales como la NASA y ESA, con el apoyo de cientos e incluso miles de personas e instituciones alrededor del mundo, han logrado crear enormes y poderosos telescopios, siendo actualmente \"James Webb\" el más potente jamás creado. Los cuales nos sorprenden con espectaculares imágenes de alta resolución de diversas estructuras presentes en el cosmos.",
+    "viewFull": "Ver galería completa",
+    "telescopeAlt": "Telescopio espacial"
+  },
+  "explore": {
+    "moreInfo": "Más información",
+    "keepExploring": "Sigue Explorando...",
+    "sky": "Conocé el cielo",
+    "argentina": "Argentina en el Espacio",
+    "learn": "Aprendé",
+    "olympics": "Olimpiadas"
+  },
+  "footer": {
+    "aboutText1": "La página \"Jovenes en Orbita\" fue diseñada con el propósito de enseñar al público sobre ciencia, específicamente en el área del conocimiento sobre el cosmos, su composición, origen y estructuras presentes en él. Aquí, encontrarás información vital sobre gran cantidad de astros, desde su origen, evolución y fin de su existencia, hasta de fenómenos presentes tanto en nuestra vida cotidiana, como a miles de millones de años luz.",
+    "aboutText2": "El sitio web fue creado para que sea una forma entretenida de aprender sobre la naturaleza de todo lo que existió, existe y existirá. Además, dispone de varias fuentes de información si le interesa aprender en persona, sobre este campo de la ciencia.",
+    "weeklyNote": "El dato astronómico se actualizará cada semana con información nueva y variada.",
+    "formTitle": "Envíe su consulta",
+    "formSubtitle": "o reporte cualquier problema del sitio web",
+    "successMessage": "¡Mensaje enviado con éxito!",
+    "successSubtext": "Responderemos a la brevedad.",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo electrónico",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "sending": "Enviando...",
+    "send": "Enviar",
+    "copyright": "© {year} Jovenes en Orbita. Hecho con ✦ para explorar el cosmos.",
+    "firstNameRequired": "El nombre es requerido",
+    "lastNameRequired": "El apellido es requerido",
+    "emailInvalid": "Correo electrónico inválido",
+    "subjectRequired": "El asunto es requerido",
+    "messageMin": "El mensaje debe tener al menos 10 caracteres"
+  },
+  "structuresPage": {
+    "metaTitle": "Estructuras en el Universo",
+    "metaDescription": "Descubrí las principales estructuras del cosmos: desde supercúmulos de galaxias hasta cometas y meteoroides.",
+    "backHome": "← Volver al inicio",
+    "title": "Estructuras en el Universo",
+    "subtitle": "El universo contiene una variedad asombrosa de estructuras, desde las más grandes como supercúmulos de galaxias, hasta las más pequeñas como meteoroides. Explorá cada una de ellas.",
+    "readMore": "Leer más →",
+    "items": {
+      "superclusters": {
+        "title": "Supercúmulos",
+        "description": "Los supercúmulos son una de las estructuras más grandes del universo. Estas, son grandes agrupaciones de cúmulos de galaxias formadas por cientos de galaxias que interactúan gravitacionalmente; y abarcan millones de años luz."
+      },
+      "galaxyClusters": {
+        "title": "Cúmulos de galaxias",
+        "description": "Agrupación de decenas, e incluso cientas de galaxias que interactuan gravitacionalmente entre sí. Compuestas además, de grandes nubes de gas caliente, sin embargo la mayor parte de su masa es materia oscura."
+      },
+      "galaxies": {
+        "title": "Galaxias",
+        "description": "Las galaxias son los mayores conjuntos de estrellas en el universo. En una, cientos de millones de estrellas están unidas por la atracción gravitacional."
+      },
+      "nebulae": {
+        "title": "Nebulosas",
+        "description": "Las nebulosas son grandes aglomeraciones de gas y polvo que se encuentran esparcidos por prácticamente todo el espacio interestelar."
+      },
+      "starClusters": {
+        "title": "Cúmulos de estrellas",
+        "description": "Los cúmulos estelares son gigantescas agrupaciones de estrellas atraídas entre sí por su atracción gravitacional mutua."
+      },
+      "stars": {
+        "title": "Estrellas",
+        "description": "Las estrellas son enormes esferas de gas que utilizan diversos elementos químicos para liberar energía y calor al medio a partir de reacciones nucleares."
+      },
+      "neutronStars": {
+        "title": "Estrellas de neutrones",
+        "description": "Las estrellas de neutrones son remanentes estelares que han alcanzado el fin de su viaje evolutivo a través del espacio y el tiempo."
+      },
+      "blackHoles": {
+        "title": "Agujeros Negros",
+        "description": "Los agujeros negros son los restos fríos de antiguas estrellas, tan densas que ninguna partícula material, ni siquiera la luz, es capaz de escapar a su poderosa fuerza gravitatoria."
+      },
+      "planetarySystems": {
+        "title": "Sistemas Planetarios",
+        "description": "Los sistemas planetarios son conjuntos de cuerpos celestes, formados por una o varias estrellas centrales y cuerpos menores que orbitan alrededor de estas por acción de la gravedad."
+      },
+      "planets": {
+        "title": "Planetas",
+        "description": "Los planetas son cuerpos que comúnmente giran alrededor de una estrella, tienen forma esférica y reflejan la luz."
+      },
+      "asteroids": {
+        "title": "Asteroides",
+        "description": "Los asteroides son principalmente masas rocosas o escombros interplanetarios de forma irregular, que pueden medir desde escasos metros a varios o cientos de kilómetros de diámetro."
+      },
+      "comets": {
+        "title": "Cometas",
+        "description": "Los cometas, al igual que los asteroides, son escombros interplanetarios. Restos rocosos y helados de la formación del Sistema Solar."
+      },
+      "meteoroids": {
+        "title": "Meteoroides, Meteoritos y Meteoros",
+        "description": "¿Cuál es la diferencia entre estos conceptos tan similares y frecuentemente confundidos en la actualidad?"
+      }
+    }
+  },
+  "datoPage": {
+    "metaTitle": "Dato Astronómico de la Semana",
+    "metaDescription": "Datos, curiosidades y descubrimientos astronómicos del último siglo.",
+    "backHome": "← Volver al inicio",
+    "galleryBadge": "Galería",
+    "science": "Ciencia",
+    "astronomy": "Astronomía",
+    "title": "Datos y descubrimientos astronómicos del último siglo",
+    "intro": "El ser humano es muy curioso; es parte de nuestra naturaleza, y en gran medida esta curiosidad nos ha hecho llegar hasta donde estamos hoy. Sea como sea, aquí disponemos de algunas respuestas a las grandes preguntas...",
+    "quoteAuthor": "\"Doctor Fisión\"",
+    "mainImageAlt": "Cúmulo de galaxias",
+    "articleTitle": "Un centenar de exoplanetas flotan libremente en la Vía Láctea",
+    "articleSubtitle": "Científicos del Centro de Astrobiología (CSIC-INTA) han observado que en una de las regiones de formación estelar más cercanas, Upper Scorpius, se encuentra una de las mayores poblaciones de planetas errantes descubierta hasta la fecha. No orbitan estrellas, si no que vagan por esa zona de la Vía Láctea.",
+    "articleImageAlt": "Pale Blue Dot - La Tierra vista desde 6.000 millones de km",
+    "articleBody": "Y es que el Universo puede resultar un lugar tremendamente amenazante si tenemos en cuenta la fragilidad de nuestro frágil y solitario mundo azul. Agujeros negros, explosiones de supernovas, estallidos de rayos Gamma, asteroides o nuestra propia estrella, el Sol, son solo algunas de las amenazas que podrían borrar de un plumazo y para siempre el rastro de nuestra especie. Cada nuevo descubrimiento que realizamos sobre el cosmos nos pone en una mejor situación de comprender nuestro lugar en él. Los científicos de todo el mundo trabajan con empeño para comprender los fenómenos que nos rodean en el Universo, y es por ello que aquí mostramos algunos de los avances más destacados realizados en el ámbito de la astronomía."
+  },
+  "languageSwitcher": {
+    "label": "Cambiar idioma"
+  }
+}
