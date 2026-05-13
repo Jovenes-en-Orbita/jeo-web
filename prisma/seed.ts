@@ -5,7 +5,6 @@ const prisma = new PrismaClient();
 async function main() {
   console.log('🌱 Starting seed...');
 
-  // Ejemplo de seed - personaliza según tus modelos
   const user = await prisma.user.upsert({
     where: { email: 'admin@jeo.com' },
     update: {},

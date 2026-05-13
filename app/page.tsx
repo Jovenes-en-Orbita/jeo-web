@@ -12,12 +12,13 @@ export default function Home() {
   return (
     <>
       <HeroSlider />
-      {/* TODO: Hacer una sección de newsletter */}
+
       <UniverseInfoSection />
       <MatterCards />
       <PlanetGrid />
       <MoonLayout />
       <ConstellationSection />
+      {/* TODO: Hacer una sección de newsletter */}
       <AstronomicalFactCard />
       <PhotoGallerySection />
       <ExploreMoreCards />
