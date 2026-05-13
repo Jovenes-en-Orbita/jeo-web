@@ -5,8 +5,11 @@ import MatterCards from "./components/home/MatterCards";
 import PlanetGrid from "./components/home/PlanetGrid";
 import MoonLayout from "./components/home/MoonLayout";
 import ConstellationSection from "./components/home/ConstellationSection";
+import NewsSection from "./components/home/NewsSection";
+import WelcomePopup from "./components/home/WelcomePopup";
 import AstronomicalFactCard from "./components/home/AstronomicalFactCard";
 import PhotoGallerySection from "./components/home/PhotoGallerySection";
+import AboutSection from "./components/home/AboutSection";
 import ExploreMoreCards from "./components/home/ExploreMoreCards";
 
 export default async function Home({
@@ -19,14 +22,17 @@ export default async function Home({
 
   return (
     <>
+      <WelcomePopup />
       <HeroSlider />
       <UniverseInfoSection />
       <MatterCards />
       <PlanetGrid />
       <MoonLayout />
       <ConstellationSection />
+      <NewsSection />
       <AstronomicalFactCard />
       <PhotoGallerySection />
+      <AboutSection />
       <ExploreMoreCards />
     </>
   );

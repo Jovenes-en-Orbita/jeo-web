@@ -17,7 +17,16 @@
     "mainNav": "Navegación principal",
     "mobileNav": "Navegación móvil",
     "openMenu": "Abrir menú",
-    "closeMenu": "Cerrar menú"
+    "closeMenu": "Cerrar menú",
+    "searchPlaceholder": "Buscar...",
+    "universe": "El Universo",
+    "varied": "Variado",
+    "matter": "Materia",
+    "spectrum": "Espectro",
+    "argentinaSpace": "Argentina en el Espacio",
+    "observeSky": "Observar el Cielo",
+    "newsletter": "Newsletter",
+    "aboutUs": "Quiénes Somos"
   },
   "hero": {
     "title1": "UNIVERSO",
@@ -59,7 +68,19 @@
     "baryonicTitle": "Materia Bariónica",
     "baryonicDesc": "La materia ordinaria que compone todo lo visible: estrellas, planetas y nosotros mismos. Representa solo el 5% del universo.",
     "lightTitle": "La Luz",
-    "lightDesc": "Radiación electromagnética visible que viaja a 299.792 km/s. Es nuestra principal herramienta para observar y comprender el universo."
+    "lightDesc": "Radiación electromagnética visible que viaja a 299.792 km/s. Es nuestra principal herramienta para observar y comprender el universo.",
+    "matterComponent": "Componente del Universo",
+    "composition": "Composición estimada",
+    "darkEnergyPercent": "68%",
+    "darkMatterPercent": "27%",
+    "antimatterPercent": "< 0.01%",
+    "baryonicPercent": "5%",
+    "lightPercent": "Variable",
+    "darkEnergyFullDesc": "La energía oscura es una forma de energía que llena todo el espacio y tiende a acelerar la expansión del universo. Es el mayor misterio de la cosmología moderna.",
+    "darkMatterFullDesc": "La materia oscura no emite luz y no puede ser vista directamente, pero sabemos que está ahí por el tirón gravitacional que ejerce sobre las galaxias.",
+    "antimatterFullDesc": "La antimateria es lo opuesto a la materia. Cuando una partícula de materia se encuentra con su antipartícula, se aniquilan liberando energía pura.",
+    "baryonicFullDesc": "La materia bariónica es todo lo que podemos ver y tocar. Está hecha de átomos, que a su vez están hechos de protones, neutrones y electrones.",
+    "lightFullDesc": "La luz es tanto una partícula como una onda. Es el mensajero del universo, permitiéndonos ver galaxias que existieron hace miles de millones de años."
   },
   "planets": {
     "title": "Sistema Solar",
@@ -71,7 +92,17 @@
     "jupiter": "Júpiter",
     "saturn": "Saturno",
     "uranus": "Urano",
-    "neptune": "Neptuno"
+    "neptune": "Neptuno",
+    "planetType": "Planeta del Sistema Solar",
+    "knowMore": "Conocer más",
+    "mercuryShortDesc": "El planeta más pequeño y cercano al Sol. Es un mundo rocoso, sin atmósfera, con temperaturas extremas.",
+    "venusShortDesc": "A menudo llamado el gemelo de la Tierra por su tamaño similar, pero con una atmósfera densa y tóxica que lo hace el más caliente.",
+    "earthShortDesc": "Nuestro hogar, el único planeta conocido que alberga vida y posee agua líquida en su superficie.",
+    "marsShortDesc": "El planeta rojo. Un mundo desértico y frío con una atmósfera muy delgada, hogar del volcán más grande del sistema solar.",
+    "jupiterShortDesc": "El gigante gaseoso, el planeta más grande de nuestro sistema. Posee una Gran Mancha Roja que es una tormenta gigante.",
+    "saturnShortDesc": "Famoso por su deslumbrante sistema de anillos. Es un gigante gaseoso compuesto principalmente de hidrógeno y helio.",
+    "uranusShortDesc": "Un gigante de hielo que orbita de lado. Su color azul verdoso se debe al metano en su atmósfera.",
+    "neptuneShortDesc": "El planeta más lejano y ventoso. Un mundo oscuro, frío y azotado por vientos supersónicos."
   },
   "moonSection": {
     "title": "Las 5 Lunas más grandes del Sistema Solar",
@@ -80,7 +111,14 @@
     "titan": "Titán",
     "callisto": "Calisto",
     "io": "Ío",
-    "theMoon": "La Luna"
+    "theMoon": "La Luna",
+    "rank": "Puesto",
+    "gotoPlanet": "Ver {planet}",
+    "ganymedeHistory": "Ganímedes es la luna más grande del Sistema Solar y la única con su propio campo magnético. Orbita a Júpiter y es incluso más grande que el planeta Mercurio.",
+    "titanHistory": "Titán es la luna más grande de Saturno y la única con una atmósfera densa. Tiene lagos de metano y etano líquido, siendo un lugar fascinante para la ciencia.",
+    "callistoHistory": "Calisto es la segunda luna más grande de Júpiter. Su superficie es la más antigua y llena de cráteres del Sistema Solar, sin apenas actividad geológica.",
+    "ioHistory": "Ío es el cuerpo con mayor actividad volcánica del Sistema Solar. Orbita tan cerca de Júpiter que las fuerzas de marea calientan su interior constantemente.",
+    "theMoonHistory": "Nuestra Luna es el quinto satélite más grande y el único lugar fuera de la Tierra donde el ser humano ha puesto un pie. Influye vitalmente en las mareas terrestres."
   },
   "constellationSection": {
     "title": "Constelaciones",
@@ -213,5 +251,89 @@
   },
   "languageSwitcher": {
     "label": "Cambiar idioma"
+  },
+  "newsletter": {
+    "welcomeTitle": "¡Bienvenido al Cosmos!",
+    "welcomeDescription": "Únete a nuestra comunidad y recibe las últimas noticias, descubrimientos y eventos astronómicos directamente en tu correo.",
+    "emailPlaceholder": "tu@email.com",
+    "subscribe": "Suscribirme ahora",
+    "subscribing": "Suscribiendo...",
+    "success": "¡Genial! Ya estás en órbita.",
+    "error": "Hubo un error. Inténtalo de nuevo.",
+    "noSpam": "No spam, solo ciencia pura."
+  },
+  "universePage": {
+    "backHome": "Volver al inicio",
+    "title": "El Universo",
+    "subtitle": "Un viaje desde el principio de los tiempos hasta la inmensidad de la actualidad.",
+    "originTitle": "El Origen",
+    "originContent": "Hace unos 13.800 millones de años, el universo comenzó con el Big Bang. No fue una explosión en el espacio, sino una expansión del espacio mismo. Desde un punto infinitesimalmente pequeño y caliente, el cosmos se ha estado expandiendo y enfriando desde entonces.",
+    "evolutionTitle": "Desarrollo",
+    "evolutionContent": "A medida que el universo se enfriaba, la energía se convirtió en materia. Primero se formaron los átomos simples, luego las primeras estrellas y galaxias. Durante miles de millones de años, el universo ha evolucionado hasta convertirse en la vasta red de estructuras que observamos hoy.",
+    "compositionTitle": "Composición",
+    "darkEnergy": "Energía Oscura",
+    "darkMatter": "Materia Oscura",
+    "baryonicMatter": "Materia Visible",
+    "compositionContent": "Sorprendentemente, todo lo que podemos ver —estrellas, planetas, personas— representa solo el 5% del universo. El resto es materia oscura (27%), que mantiene unidas a las galaxias, y energía oscura (68%), que acelera la expansión del cosmos.",
+    "charTitle1": "Inmensidad",
+    "charDesc1": "El universo observable tiene un diámetro de unos 93.000 millones de años luz y contiene billones de galaxias.",
+    "charTitle2": "Expansión",
+    "charDesc2": "El espacio mismo se está expandiendo en todas direcciones, y lo hace cada vez más rápido debido a la energía oscura.",
+    "charTitle3": "Leyes Físicas",
+    "charDesc3": "Todo el cosmos se rige por leyes fundamentales como la gravedad y el electromagnetismo, constantes en todo el espacio-tiempo.",
+    "ctaTitle": "¿Listo para explorar las estructuras?",
+    "ctaButton": "Explorar Estructuras"
+  },
+  "argentinaSpacePage": {
+    "back": "Volver",
+    "title": "Argentina en el Espacio",
+    "subtitle": "Un recorrido por la historia, el presente y el futuro del desarrollo aeroespacial argentino.",
+    "historyTitle": "Historia Aeroespacial",
+    "historyContent": "Argentina tiene una larga tradición en el sector espacial. Desde los primeros lanzamientos de cohetes en los años 60 hasta la creación de la CONAE en los 90, el país ha demostrado una capacidad técnica excepcional en el Cono Sur.",
+    "satellitesTitle": "Satélites y Misiones",
+    "satellitesContent": "Misiones como el SAC-D y la constelación SAOCOM han posicionado a Argentina como líder en observación de la Tierra con tecnología de radar de microondas.",
+    "launchersTitle": "Lanzadores Propios",
+    "launchersContent": "El proyecto Tronador busca dotar a Argentina de su propio vehículo lanzador de satélites, permitiendo soberanía completa en el acceso al espacio.",
+    "companiesTitle": "Empresas del Sector",
+    "companiesContent": "INVAP, VENG y numerosas startups tecnológicas conforman un ecosistema industrial robusto que exporta tecnología al mundo entero.",
+    "futureTitle": "El Futuro",
+    "futureContent": "Con el desarrollo de satélites más pequeños, la exploración lunar en colaboración internacional y el perfeccionamiento de los lanzadores, el futuro es brillante."
+  },
+  "skyPage": {
+    "back": "Volver",
+    "title": "Observa el Cielo",
+    "subtitle": "Guía práctica para disfrutar de la astronomía desde cualquier lugar.",
+    "astrotourismTitle": "Astroturismo",
+    "astrotourismContent": "Argentina cuenta con algunos de los cielos más limpios del mundo. Desde San Juan hasta la Patagonia, existen parques nacionales dedicados a la observación de estrellas.",
+    "mapsTitle": "Mapas del Cielo",
+    "mapsContent": "Descarga nuestros mapas estelares actualizados para identificar constelaciones, planetas y eventos celestes visibles este mes.",
+    "downloadMaps": "Descargar PDFs",
+    "photographyTitle": "Astrofotografía",
+    "photographyContent": "Consejos básicos para capturar la Vía Láctea con tu cámara o smartphone. El uso de trípode y largas exposiciones es la clave.",
+    "tipsTitle": "Recomendaciones",
+    "tipsContent": "Aléjate de la contaminación lumínica, deja que tus ojos se acostumbren a la oscuridad y usa luces rojas para no perder la adaptación nocturna."
+  },
+  "news": {
+    "badge": "Noticias del Cosmos",
+    "title": "Últimos Descubrimientos",
+    "viewAll": "Ver todas las noticias",
+    "readMore": "Leer noticia completa"
+  },
+  "about": {
+    "badge": "¿Quiénes Somos?",
+    "title": "Jóvenes en Órbita",
+    "description": "Somos una plataforma dedicada a la divulgación científica y astronómica, nacida con la misión de acercar el cosmos a las nuevas generaciones de una manera interactiva y moderna.",
+    "missionTitle": "Nuestra Misión",
+    "missionContent": "Inspirar curiosidad por el universo a través de tecnología educativa de vanguardia y contenido científico riguroso.",
+    "foundersTitle": "Fundadores",
+    "foundersContent": "Un equipo multidisciplinario de astrónomos, desarrolladores y educadores apasionados por el espacio.",
+    "partnersTitle": "Alianzas",
+    "partnersContent": "Colaboramos con instituciones educativas y observatorios para garantizar la veracidad de nuestra información.",
+    "quote": "El universo está ahí fuera, esperando a que lo descubras."
+  },
+  "newsDetail": {
+    "back": "Volver a noticias",
+    "author": "Escrito por",
+    "share": "Compartir"
   }
 }

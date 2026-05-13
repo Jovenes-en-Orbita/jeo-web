@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
@@ -14,20 +14,25 @@ export default function Header() {
   const t = useTranslations("nav");
 
   const navLinks = [
+    { label: t("universe"), href: "/universo" as const },
     {
-      label: t("info"),
+      label: t("varied"),
       href: "/" as const,
       subLinks: [
-        { label: t("structures"), href: "/estructuras" as const },
-        { label: t("solarSystem"), href: "/#sistema-solar" as const },
-        { label: t("moons"), href: "/#lunas" as const },
-        { label: t("constellations"), href: "/#constelaciones" as const },
-        { label: t("astronomicalData"), href: "/dato-astronomico" as const },
-        { label: t("photoGallery"), href: "/#galeria" as const },
+        { label: t("matter"), href: "/#materia" as const },
+        { label: t("spectrum"), href: "/#materia" as const },
+        { label: t("argentinaSpace"), href: "/explorar/argentina-espacio" as const },
+        { label: t("observeSky"), href: "/explorar/cielo" as const },
       ],
     },
-    { label: t("keepExploring"), href: "/#explorar" as const },
-    { label: t("contact"), href: "/#contacto" as const },
+    { label: t("structures"), href: "/estructuras" as const },
+    { label: t("solarSystem"), href: "/#sistema-solar" as const },
+    { label: t("moons"), href: "/#lunas" as const },
+    { label: t("constellations"), href: "/#constelaciones" as const },
+    { label: t("newsletter"), href: "/#newsletter" as const },
+    { label: t("astronomicalData"), href: "/dato-astronomico" as const },
+    { label: t("photoGallery"), href: "/#galeria" as const },
+    { label: t("aboutUs"), href: "/#quienes-somos" as const },
   ];
 
   return (
@@ -90,7 +95,7 @@ export default function Header() {
                     >
                       {link.subLinks.map((sub) => (
                         <Link
-                          key={sub.href}
+                          key={sub.label}
                           href={sub.href}
                           className="block px-4 py-3 text-sm text-white/60 hover:text-white hover:bg-white/5 transition-colors"
                         >
@@ -103,12 +108,25 @@ export default function Header() {
             </div>
           ))}
 
+          {/* Search Box (Desktop) */}
+          <div className="relative ml-4 hidden xl:block">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-white/40" />
+            <input
+              type="text"
+              placeholder={t("searchPlaceholder")}
+              className="bg-white/5 border border-white/10 rounded-full py-1.5 pl-9 pr-4 text-[11px] text-white placeholder:text-white/20 focus:outline-none focus:ring-1 focus:ring-blue-500/50 w-48 transition-all"
+            />
+          </div>
+
           {/* Language Switcher (Desktop) */}
           <LanguageSwitcher />
         </nav>
 
-        {/* Mobile: Language + Toggle */}
+        {/* Mobile: Search + Language + Toggle */}
         <div className="flex items-center gap-2 lg:hidden">
+          <button className="p-2 rounded-lg text-white/40 hover:text-white transition-colors">
+            <Search className="h-4 w-4" />
+          </button>
           <LanguageSwitcher />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -154,7 +172,7 @@ export default function Header() {
                     <div className="ml-4 mt-1 space-y-1 border-l border-white/10 pl-4">
                       {link.subLinks.map((sub) => (
                         <Link
-                          key={sub.href}
+                          key={sub.label}
                           href={sub.href}
                           onClick={() => setMobileOpen(false)}
                           className="block px-3 py-2 text-sm text-white/40 hover:text-white/80 transition-colors"

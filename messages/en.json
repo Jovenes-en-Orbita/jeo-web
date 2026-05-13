@@ -17,7 +17,16 @@
     "mainNav": "Main navigation",
     "mobileNav": "Mobile navigation",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "searchPlaceholder": "Search...",
+    "universe": "The Universe",
+    "varied": "Varied",
+    "matter": "Matter",
+    "spectrum": "Spectrum",
+    "argentinaSpace": "Argentina in Space",
+    "observeSky": "Observe the Sky",
+    "newsletter": "Newsletter",
+    "aboutUs": "About Us"
   },
   "hero": {
     "title1": "UNIVERSE",
@@ -59,7 +68,19 @@
     "baryonicTitle": "Baryonic Matter",
     "baryonicDesc": "The ordinary matter that makes up everything visible: stars, planets, and ourselves. It represents only 5% of the universe.",
     "lightTitle": "Light",
-    "lightDesc": "Visible electromagnetic radiation that travels at 299,792 km/s. It is our main tool for observing and understanding the universe."
+    "lightDesc": "Visible electromagnetic radiation that travels at 299,792 km/s. It is our main tool for observing and understanding the universe.",
+    "matterComponent": "Universe Component",
+    "composition": "Estimated composition",
+    "darkEnergyPercent": "68%",
+    "darkMatterPercent": "27%",
+    "antimatterPercent": "< 0.01%",
+    "baryonicPercent": "5%",
+    "lightPercent": "Variable",
+    "darkEnergyFullDesc": "Dark energy is a form of energy that fills all of space and tends to accelerate the expansion of the universe. It is the greatest mystery of modern cosmology.",
+    "darkMatterFullDesc": "Dark matter does not emit light and cannot be seen directly, but we know it is there by the gravitational pull it exerts on galaxies.",
+    "antimatterFullDesc": "Antimatter is the opposite of matter. When a particle of matter meets its antiparticle, they annihilate each other, releasing pure energy.",
+    "baryonicFullDesc": "Baryonic matter is everything we can see and touch. It is made of atoms, which in turn are made of protons, neutrons, and electrons.",
+    "lightFullDesc": "Light is both a particle and a wave. It is the messenger of the universe, allowing us to see galaxies that existed billions of years ago."
   },
   "planets": {
     "title": "Solar System",
@@ -71,7 +92,17 @@
     "jupiter": "Jupiter",
     "saturn": "Saturn",
     "uranus": "Uranus",
-    "neptune": "Neptune"
+    "neptune": "Neptune",
+    "planetType": "Solar System Planet",
+    "knowMore": "Learn more",
+    "mercuryShortDesc": "The smallest and closest planet to the Sun. A rocky world without an atmosphere and extreme temperatures.",
+    "venusShortDesc": "Often called Earth's twin due to its similar size, but with a thick, toxic atmosphere that makes it the hottest.",
+    "earthShortDesc": "Our home, the only known planet to harbor life and have liquid water on its surface.",
+    "marsShortDesc": "The red planet. A cold, desert world with a very thin atmosphere, home to the largest volcano in the solar system.",
+    "jupiterShortDesc": "The gas giant, the largest planet in our system. It has a Great Red Spot that is a giant storm.",
+    "saturnShortDesc": "Famous for its stunning ring system. A gas giant composed mainly of hydrogen and helium.",
+    "uranusShortDesc": "An ice giant that orbits on its side. Its blue-green color comes from methane in its atmosphere.",
+    "neptuneShortDesc": "The most distant and windiest planet. A dark, cold world whipped by supersonic winds."
   },
   "moonSection": {
     "title": "The 5 Largest Moons in the Solar System",
@@ -80,7 +111,14 @@
     "titan": "Titan",
     "callisto": "Callisto",
     "io": "Io",
-    "theMoon": "The Moon"
+    "theMoon": "The Moon",
+    "rank": "Rank",
+    "gotoPlanet": "See {planet}",
+    "ganymedeHistory": "Ganymede is the largest moon in the Solar System and the only one with its own magnetic field. It orbits Jupiter and is even larger than the planet Mercury.",
+    "titanHistory": "Titan is Saturn's largest moon and the only one with a dense atmosphere. It has lakes of liquid methane and ethane, making it a fascinating place for science.",
+    "callistoHistory": "Callisto is Jupiter's second largest moon. Its surface is the oldest and most cratered in the Solar System, with almost no geological activity.",
+    "ioHistory": "Io is the most volcanically active body in the Solar System. It orbits so close to Jupiter that tidal forces constantly heat its interior.",
+    "theMoonHistory": "Our Moon is the fifth largest satellite and the only place outside Earth where humans have set foot. It vitally influences Earth's tides."
   },
   "constellationSection": {
     "title": "Constellations",
@@ -213,5 +251,89 @@
   },
   "languageSwitcher": {
     "label": "Switch language"
+  },
+  "newsletter": {
+    "welcomeTitle": "Welcome to the Cosmos!",
+    "welcomeDescription": "Join our community and receive the latest news, discoveries, and astronomical events directly in your inbox.",
+    "emailPlaceholder": "your@email.com",
+    "subscribe": "Subscribe now",
+    "subscribing": "Subscribing...",
+    "success": "Great! You are now in orbit.",
+    "error": "There was an error. Try again.",
+    "noSpam": "No spam, just pure science."
+  },
+  "universePage": {
+    "backHome": "Back to home",
+    "title": "The Universe",
+    "subtitle": "A journey from the beginning of time to the vastness of today.",
+    "originTitle": "The Origin",
+    "originContent": "About 13.8 billion years ago, the universe began with the Big Bang. It wasn't an explosion in space, but an expansion of space itself. From an infinitesimally small and hot point, the cosmos has been expanding and cooling ever since.",
+    "evolutionTitle": "Development",
+    "evolutionContent": "As the universe cooled, energy converted into matter. First simple atoms formed, then the first stars and galaxies. For billions of years, the universe has evolved into the vast network of structures we observe today.",
+    "compositionTitle": "Composition",
+    "darkEnergy": "Dark Energy",
+    "darkMatter": "Dark Matter",
+    "baryonicMatter": "Visible Matter",
+    "compositionContent": "Surprisingly, everything we can see —stars, planets, people— represents only 5% of the universe. The rest is dark matter (27%), which holds galaxies together, and dark energy (68%), which accelerates the expansion of the cosmos.",
+    "charTitle1": "Vastness",
+    "charDesc1": "The observable universe has a diameter of about 93 billion light-years and contains trillions of galaxies.",
+    "charTitle2": "Expansion",
+    "charDesc2": "Space itself is expanding in all directions, and it does so faster and faster due to dark energy.",
+    "charTitle3": "Physical Laws",
+    "charDesc3": "The entire cosmos is governed by fundamental laws like gravity and electromagnetism, constant throughout space-time.",
+    "ctaTitle": "Ready to explore the structures?",
+    "ctaButton": "Explore Structures"
+  },
+  "argentinaSpacePage": {
+    "back": "Back",
+    "title": "Argentina in Space",
+    "subtitle": "A journey through the history, present, and future of Argentine aerospace development.",
+    "historyTitle": "Aerospace History",
+    "historyContent": "Argentina has a long tradition in the space sector. From the first rocket launches in the 60s to the creation of CONAE in the 90s, the country has demonstrated exceptional technical capacity in the Southern Cone.",
+    "satellitesTitle": "Satellites and Missions",
+    "satellitesContent": "Missions like SAC-D and the SAOCOM constellation have positioned Argentina as a leader in Earth observation with microwave radar technology.",
+    "launchersTitle": "Own Launchers",
+    "launchersContent": "The Tronador project seeks to provide Argentina with its own satellite launch vehicle, allowing complete sovereignty in access to space.",
+    "companiesTitle": "Sector Companies",
+    "companiesContent": "INVAP, VENG, and numerous technological startups form a robust industrial ecosystem that exports technology to the entire world.",
+    "futureTitle": "The Future",
+    "futureContent": "With the development of smaller satellites, lunar exploration in international collaboration, and the refinement of launchers, the future is bright."
+  },
+  "skyPage": {
+    "back": "Back",
+    "title": "Observe the Sky",
+    "subtitle": "Practical guide to enjoying astronomy from anywhere.",
+    "astrotourismTitle": "Astrotourism",
+    "astrotourismContent": "Argentina has some of the cleanest skies in the world. From San Juan to Patagonia, there are national parks dedicated to stargazing.",
+    "mapsTitle": "Sky Maps",
+    "mapsContent": "Download our updated star maps to identify constellations, planets, and celestial events visible this month.",
+    "downloadMaps": "Download PDFs",
+    "photographyTitle": "Astrophotography",
+    "photographyContent": "Basic tips for capturing the Milky Way with your camera or smartphone. Using a tripod and long exposures is the key.",
+    "tipsTitle": "Recommendations",
+    "tipsContent": "Get away from light pollution, let your eyes get used to the darkness, and use red lights so as not to lose night adaptation."
+  },
+  "news": {
+    "badge": "Cosmos News",
+    "title": "Latest Discoveries",
+    "viewAll": "View all news",
+    "readMore": "Read full story"
+  },
+  "about": {
+    "badge": "Who We Are",
+    "title": "Jovenes en Orbita",
+    "description": "We are a platform dedicated to scientific and astronomical outreach, born with the mission of bringing the cosmos closer to new generations in an interactive and modern way.",
+    "missionTitle": "Our Mission",
+    "missionContent": "To inspire curiosity about the universe through cutting-edge educational technology and rigorous scientific content.",
+    "foundersTitle": "Founders",
+    "foundersContent": "A multidisciplinary team of astronomers, developers, and educators passionate about space.",
+    "partnersTitle": "Partnerships",
+    "partnersContent": "We collaborate with educational institutions and observatories to ensure the accuracy of our information.",
+    "quote": "The universe is out there, waiting for you to discover it."
+  },
+  "newsDetail": {
+    "back": "Back to news",
+    "author": "Written by",
+    "share": "Share"
   }
 }

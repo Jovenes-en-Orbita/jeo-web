@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Send, Mail, User, MessageSquare, FileText } from "lucide-react";
+import { Send, Mail, User, MessageSquare, FileText, Instagram, Facebook, Youtube, Twitter } from "lucide-react";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 
@@ -37,21 +37,19 @@ export default function Footer() {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    const formData = new FormData();
-    formData.append("Nombre", data.nombre);
-    formData.append("Apellido", data.apellido);
-    formData.append("Correo electrónico", data.email);
-    formData.append("Asunto", data.asunto);
-    formData.append("Mensaje", data.mensaje);
-
-    await fetch("https://formsubmit.co/santi.gar.paredes@gmail.com", {
+    const response = await fetch("/api/contact", {
       method: "POST",
-      body: formData,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
     });
 
-    setSubmitted(true);
-    reset();
-    setTimeout(() => setSubmitted(false), 5000);
+    if (response.ok) {
+      setSubmitted(true);
+      reset();
+      setTimeout(() => setSubmitted(false), 5000);
+    } else {
+      alert(t("errorSending"));
+    }
   };
 
   return (
@@ -211,6 +209,20 @@ export default function Footer() {
           <p className="text-xs text-white/30">
             {t("copyright", { year: new Date().getFullYear() })}
           </p>
+          <div className="flex items-center justify-center gap-6 mt-6">
+            <a href="#" className="text-white/20 hover:text-white transition-colors">
+              <Instagram className="h-5 w-5" />
+            </a>
+            <a href="#" className="text-white/20 hover:text-white transition-colors">
+              <Facebook className="h-5 w-5" />
+            </a>
+            <a href="#" className="text-white/20 hover:text-white transition-colors">
+              <Youtube className="h-5 w-5" />
+            </a>
+            <a href="#" className="text-white/20 hover:text-white transition-colors">
+              <Twitter className="h-5 w-5" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

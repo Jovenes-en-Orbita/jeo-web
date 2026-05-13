@@ -17,3 +17,35 @@ model User {
 
   @@map("users")
 }
+
+model NewsletterSubscriber {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("newsletter_subscribers")
+}
+
+model ContactMessage {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("contact_messages")
+}
+
+model AstronomicalPost {
+  id          String   @id @default(uuid())
+  title       String
+  content     String   @db.Text
+  imageUrl    String?
+  category    String
+  publishDate DateTime @default(now()) @map("publish_date")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@map("astronomical_posts")
+}
