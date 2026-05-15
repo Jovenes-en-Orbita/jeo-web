@@ -19,7 +19,7 @@ export default function LanguageSwitcher() {
   return (
     <button
       onClick={handleSwitch}
-      className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold tracking-[0.1em] uppercase text-white/60 hover:text-white hover:bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-200"
+      className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold tracking-wides uppercase text-white/60 hover:text-white hover:bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-200"
       aria-label={locale === "es" ? "Switch to English" : "Cambiar a Español"}
       title={locale === "es" ? "Switch to English" : "Cambiar a Español"}
     >

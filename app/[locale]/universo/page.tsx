@@ -4,6 +4,9 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { ArrowLeft, Sparkles, Clock, Zap } from "lucide-react";
 
+import SpaceBackground from "../components/shared/SpaceBackground";
+import NebulaGlows from "../components/shared/NebulaGlows";
+
 export default async function UniversePage({
   params,
 }: {
@@ -22,15 +25,12 @@ function UniverseContent() {
     <div className="min-h-screen bg-[#050508] text-white">
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <Image
-          src="https://i.ibb.co/LrShG6B/desktop-wallpaper-stars-in-space-background-real-space.jpg"
-          alt="Universe"
-          fill
-          sizes="100vw"
-          className="object-cover brightness-[0.3]"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#050508]/50 to-[#050508]" />
+        <SpaceBackground />
+        
+        {/* Nebula Glows */}
+        <NebulaGlows opacity="opacity-50" />
+
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#050508]/50 to-[#050508] z-[1]" />
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <Link

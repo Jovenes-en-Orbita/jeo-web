@@ -4,6 +4,9 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { ArrowLeft, Telescope, Map, Camera, Info } from "lucide-react";
 
+import SpaceBackground from "../../components/shared/SpaceBackground";
+import NebulaGlows from "../../components/shared/NebulaGlows";
+
 export default async function SkyObservationPage({
   params,
 }: {
@@ -22,15 +25,12 @@ function SkyObservationContent() {
     <div className="min-h-screen bg-[#050508] text-white">
       {/* Hero */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <Image
-          src="https://i.ibb.co/twvGpSm8/Captura-de-pantalla-2025-12-23-181022.png"
-          alt="Observar el cielo"
-          fill
-          sizes="100vw"
-          className="object-cover brightness-[0.4]"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#050508]" />
+        <SpaceBackground />
+
+        {/* Nebula Glows */}
+        <NebulaGlows opacity="opacity-50" />
+
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#050508] z-[1]" />
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <Link
@@ -40,7 +40,7 @@ function SkyObservationContent() {
             <ArrowLeft className="h-4 w-4" />
             {t("back")}
           </Link>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
             {t("title")}
           </h1>
           <p className="text-xl text-white/60 font-light max-w-2xl mx-auto">
