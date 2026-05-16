@@ -5,7 +5,11 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import type { Container, Engine } from "@tsparticles/engine";
 
-export default function SpaceBackground() {
+interface SpaceBackgroundProps {
+  id?: string;
+}
+
+export default function SpaceBackground({ id = "tsparticles" }: SpaceBackgroundProps) {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -16,15 +20,15 @@ export default function SpaceBackground() {
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container) => {
-    // console.log(container);
+  const particlesLoaded = async () => {
+    // console.log("Particles loaded");
   };
 
   if (!init) return null;
 
   return (
     <Particles
-      id="tsparticles"
+      id={id}
       className="absolute inset-0 z-0"
       particlesLoaded={particlesLoaded}
       options={{
