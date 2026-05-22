@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowRight, Compass } from "lucide-react";
+import { X, Compass } from "lucide-react";
+import InteractiveLink from "../shared/InteractiveLink";
 
 const moonData = [
   { key: "ganymede", rank: 1, image: "https://i.postimg.cc/65BzYHbL/Captura-2.png", planet: "jupiter" },
@@ -139,15 +139,14 @@ export default function MoonLayout() {
                   </p>
                 </div>
 
-                <Link
-                  href={`/#sistema-solar`}
+                <InteractiveLink
+                  href="/#sistema-solar"
                   onClick={() => setSelectedMoon(null)}
-                  className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 transition-all group w-full justify-center"
+                  className="gap-3 px-8 py-4 rounded-2xl w-full justify-center"
+                  icon={<Compass className="h-5 w-5 text-blue-400" />}
                 >
-                  <Compass className="h-5 w-5 text-blue-400" />
                   {t("gotoPlanet", { planet: t(`planets:${selectedMoon.planet}`) })}
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </InteractiveLink>
               </div>
             </motion.div>
           </div>
@@ -156,3 +155,4 @@ export default function MoonLayout() {
     </section>
   );
 }
+

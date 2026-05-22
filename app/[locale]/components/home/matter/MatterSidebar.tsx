@@ -23,12 +23,6 @@ export default function MatterSidebar({ spectrumItems, t }: MatterSidebarProps) 
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <ImageOverlayCard
-          src="https://i.postimg.cc/pX1SPqD0/Optimismo-moderado-en-la-astronomia-espanola.jpg"
-          alt={t("structuresTitle")}
-          label={t("structuresTitle")}
-          className="aspect-square sm:aspect-auto sm:h-48"
-        />
-        <ImageOverlayCard
           src="https://i.postimg.cc/w3Ks1ZdH/Merging-black-holes-pillars.jpg"
           alt={t("gravitationalWaves")}
           label={t("gravitationalWaves")}
