@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import SectionBadge from "@/app/[locale]/components/shared/SectionBadge";
 import Image from "next/image";
 import { Users, Target, Handshake } from "lucide-react";
 
@@ -15,9 +16,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="inline-block text-[10px] tracking-[0.3em] uppercase text-blue-400 font-medium mb-4 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5">
-              {t("badge")}
-            </span>
+            <SectionBadge color="blue">{t("badge")}</SectionBadge>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-8">
               {t("title")}
             </h2>

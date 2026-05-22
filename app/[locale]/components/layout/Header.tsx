@@ -41,7 +41,6 @@ export default function Header() {
         href: "/explorar/argentina-espacio" as const,
       },
       { label: t("observeSky"), href: "/explorar/cielo" as const },
-      { label: t("matter"), href: "/#materia" as const, isHash: true },
       { label: t("spectrum"), href: "/#materia" as const, isHash: true },
       {
         label: t("solarSystem"),
@@ -80,9 +79,8 @@ export default function Header() {
       <motion.div
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className={`pointer-events-auto relative flex items-center justify-between px-2 py-1.5 rounded-full border border-white/10 bg-[#0a0a0f]/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-all duration-500 ${
-          isScrolled ? "scale-95 max-w-4xl" : "max-w-5xl"
-        } w-full`}
+        className={`pointer-events-auto relative flex items-center justify-between px-2 py-1.5 rounded-full border border-white/10 bg-[#0a0a0f]/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-all duration-500 ${isScrolled ? "scale-95 max-w-4xl" : "max-w-5xl"
+          } w-full`}
       >
         {/* Left Side: Contextual Links */}
         <LeftSide sections={leftSections} />

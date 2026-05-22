@@ -51,11 +51,12 @@ export default function WelcomePopup() {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md" onClick={handleClose}>
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            onClick={(e) => e.stopPropagation()}
             className="relative w-full max-w-lg overflow-hidden rounded-3xl bg-[#0d0d12] border border-white/10 shadow-[0_0_50px_rgba(59,130,246,0.15)]"
           >
             {/* Background Effects */}

@@ -69,11 +69,12 @@ export default function PlanetGrid() {
 
       <AnimatePresence>
         {selectedPlanet && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/40 backdrop-blur-md">
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/40 backdrop-blur-md" onClick={() => setSelectedPlanet(null)}>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
+              onClick={(e) => e.stopPropagation()}
               className="relative w-full max-w-lg bg-[#0d0d12]/90 border border-white/10 rounded-3xl overflow-hidden shadow-2xl"
             >
               <button
