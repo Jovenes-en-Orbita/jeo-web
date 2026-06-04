@@ -1,6 +1,6 @@
 "use client";
 
-import { Instagram, Facebook, Youtube, Twitter, LucideIcon, Github, Linkedin } from "lucide-react";
+import { Instagram, Facebook, Youtube, Twitter, LucideIcon, Linkedin, Mail } from "lucide-react";
 
 interface SocialLink {
   icon: LucideIcon;
@@ -13,6 +13,8 @@ const defaultLinks: SocialLink[] = [
   { icon: Facebook, href: "#", label: "Facebook" },
   { icon: Youtube, href: "#", label: "YouTube" },
   { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Mail, href: "#", label: "Gmail" },
 ];
 
 interface SocialLinksProps {

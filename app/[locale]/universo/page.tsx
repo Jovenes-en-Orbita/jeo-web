@@ -5,6 +5,7 @@ import { Link } from "@/i18n/routing";
 import { ArrowLeft, Sparkles, Clock, Zap } from "lucide-react";
 
 import NebulaGlows from "../components/shared/NebulaGlows";
+import MatterCards from "../components/home/MatterCards";
 
 export default async function UniversePage({
   params,
@@ -50,7 +51,7 @@ function UniverseContent() {
       {/* Content Sections */}
       <section className="max-w-5xl mx-auto px-4 py-20 space-y-32">
         {/* Origin */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div id="origen" className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-2xl bg-orange-500/10 border border-orange-500/20">
@@ -74,7 +75,7 @@ function UniverseContent() {
         </div>
 
         {/* Development */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div id="desarrollo" className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="order-2 md:order-1 relative aspect-video rounded-3xl overflow-hidden border border-white/10">
             <Image
               src="https://i.ibb.co/LrShG6B/desktop-wallpaper-stars-in-space-background-real-space.jpg"
@@ -98,7 +99,7 @@ function UniverseContent() {
         </div>
 
         {/* Composition */}
-        <div className="p-12 rounded-[3rem] bg-white/[0.02] border border-white/5 relative overflow-hidden">
+        <div id="composicion" className="p-12 rounded-[3rem] bg-white/[0.02] border border-white/5 relative overflow-hidden">
           <div className="absolute top-0 right-0 p-12 opacity-10">
             <Sparkles className="h-32 w-32" />
           </div>
@@ -124,8 +125,16 @@ function UniverseContent() {
           </div>
         </div>
 
+        {/* Matter detail cards */}
+        <div id="materia" className="border-t border-b border-zinc-900 my-16 py-8">
+          <h3 className="text-xl font-bold uppercase tracking-widest text-center text-[#e30613] mb-8 font-heading">
+            Componentes e Interacciones de la Materia
+          </h3>
+          <MatterCards />
+        </div>
+
         {/* Characteristics */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div id="caracteristicas" className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[1, 2, 3].map((i) => (
             <div key={i} className="p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.05] transition-colors">
               <h4 className="text-xl font-bold mb-4">{t(`charTitle${i}`)}</h4>

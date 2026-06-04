@@ -8,6 +8,7 @@ export default function FooterBottom() {
 
   return (
     <div className="mt-16 pt-8 border-t border-zinc-800 text-center">
+      {/* TODO: Colocar las direcciones reales correspondientes a cada red social (Instagram, Facebook, YouTube, Twitter, LinkedIn y Gmail) en SocialLinks */}
       <p className="text-xs text-white/30">
         {t("copyright", { year: new Date().getFullYear() })}
       </p>
