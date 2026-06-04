@@ -6,10 +6,13 @@ import { useTranslations } from "next-intl";
 import { usePathname, Link } from "@/i18n/routing";
 import { Menu, X } from "lucide-react";
 import LanguageSwitcher from "./components/LanguageSwitcher";
-import MenuOverlay from "./components/header/MenuOverlay";
+import SearchBar from "./components/header/SearchBar";
+import DropdownMenu from "./components/header/DropdownMenu";
+import type { DropdownItem } from "./components/header/DropdownMenu";
+import MobileMenu from "./components/header/MobileMenu";
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const t = useTranslations("nav");
@@ -23,44 +26,34 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close menu on route change
+  // Close mobile menu on route change
   useEffect(() => {
-    setMenuOpen(false);
+    setMobileMenuOpen(false);
   }, [pathname]);
 
-  // Determine local section links based on the active page
-  const activeSectionLinks = useMemo(() => {
-    if (pathname === "/" || pathname === "") {
-      return [
-        { label: t("aboutUs"), href: "#quienes-somos" },
-        { label: "Argentina", href: "#argentina-espacio" },
-        { label: "Galería", href: "#galeria" },
-        { label: t("newsletter"), href: "#newsletter-seccion" },
-        { label: "Contacto", href: "#contacto-seccion" },
-      ];
-    }
-    if (pathname === "/universo") {
-      return [
-        { label: "Origen", href: "#origen" },
-        { label: "Desarrollo", href: "#desarrollo" },
-        { label: "Composición", href: "#composicion" },
-        { label: "Materia", href: "#materia" },
-        { label: "Características", href: "#caracteristicas" },
-      ];
-    }
-    if (pathname === "/sistema-solar") {
-      return [
-        { label: t("solarSystem"), href: "#sistema-solar" },
-        { label: t("moons"), href: "#lunas" },
-      ];
-    }
-    if (pathname === "/constelaciones") {
-      return [
-        { label: t("constellations"), href: "#constelaciones" },
-      ];
-    }
-    return [];
-  }, [pathname, t]);
+  // Cosmos dropdown items
+  const cosmosItems: DropdownItem[] = useMemo(
+    () => [
+      { label: t("home"), href: "/", desc: t("homeDesc") },
+      { label: t("researchTopics"), href: "/temas", desc: t("researchTopicsDesc") },
+      { label: t("universe"), href: "/universo", desc: t("universeDesc") },
+      { label: t("solarSystem"), href: "/sistema-solar", desc: t("solarSystemDesc") },
+      { label: t("constellations"), href: "/constelaciones", desc: t("constellationsDesc") },
+      { label: t("cosmicStructures"), href: "/estructuras", desc: t("cosmicStructuresDesc") },
+    ],
+    [t]
+  );
+
+  // Multimedia dropdown items
+  const multimediaItems: DropdownItem[] = useMemo(
+    () => [
+      { label: t("newsletter"), href: "#newsletter-seccion", desc: t("newsletterDesc"), isHash: true },
+      { label: t("eBooks"), href: "#", desc: t("eBooksDesc"), isHash: true },
+      { label: t("socialMedia"), href: "#", desc: t("socialMediaDesc"), isHash: true },
+      { label: t("aboutJEO"), href: "#quienes-somos", desc: t("aboutJEODesc"), isHash: true },
+    ],
+    [t]
+  );
 
   return (
     <header
@@ -73,9 +66,14 @@ export default function Header() {
       {/* Red NASA line decoration at top */}
       <div className="h-[3px] w-full bg-[#e30613]" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        {/* Left Side: Brand Logo Text (de-implemented planet logo as requested) */}
-        <Link href="/" className="flex flex-col group focus:outline-none">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+        {/* Left: Search */}
+        <div className="flex-shrink-0">
+          <SearchBar />
+        </div>
+
+        {/* Center: Logo */}
+        <Link href="/" className="flex flex-col group focus:outline-none flex-shrink-0">
           <span className="text-sm font-black tracking-[0.25em] text-white uppercase font-heading group-hover:text-zinc-200 transition-colors">
             JÓVENES EN ÓRBITA
           </span>
@@ -84,39 +82,36 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Center: Active Page Local Section Links (Desktop) */}
-        <nav className="hidden lg:flex items-center gap-8">
-          {activeSectionLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="text-xs font-bold tracking-widest uppercase text-white/80 hover:text-white transition-colors relative py-2 group"
-            >
-              {link.label}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#e30613] transition-all duration-300 group-hover:w-full" />
-            </a>
-          ))}
-        </nav>
+        {/* Right: Dropdowns + Language */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          {/* Desktop dropdown menus */}
+          <div className="hidden md:flex items-center gap-2">
+            <DropdownMenu title={t("cosmos")} items={cosmosItems} />
+            <DropdownMenu title={t("multimedia")} items={multimediaItems} />
+          </div>
 
-        {/* Right Side: Actions (Desktop/Mobile) */}
-        <div className="flex items-center gap-4">
+          {/* Language switcher */}
           <LanguageSwitcher />
 
-          {/* Toggle Menu Button (Hamburguesa) - Opens full platform sub-pages */}
+          {/* Mobile hamburger */}
           <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="p-2 rounded-md hover:bg-white/5 border border-white/10 hover:border-white/20 transition-all text-white focus:outline-none cursor-pointer"
-            aria-label="Toggle Menu"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 rounded-md hover:bg-white/5 border border-white/10 hover:border-white/20 transition-all text-white focus:outline-none cursor-pointer"
+            aria-label={mobileMenuOpen ? t("closeMenu") : t("openMenu")}
           >
-            {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </div>
 
-      {/* Global Menu Overlay */}
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
-        {menuOpen && (
-          <MenuOverlay onClose={() => setMenuOpen(false)} />
+        {mobileMenuOpen && (
+          <MobileMenu
+            onClose={() => setMobileMenuOpen(false)}
+            cosmosItems={cosmosItems}
+            multimediaItems={multimediaItems}
+          />
         )}
       </AnimatePresence>
     </header>
