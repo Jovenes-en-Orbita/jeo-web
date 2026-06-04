@@ -1,34 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  /* ── Cosmic Color Palette ── */
-  --color-space-black: #0a0a0f;
-  --color-space-dark: #0f0f1a;
-  --color-space-deep: #121225;
-  --color-nebula-purple: #6c3fa0;
-  --color-nebula-blue: #3b82f6;
-  --color-nebula-cyan: #22d3ee;
-  --color-star-gold: #f4c542;
-  --color-star-warm: #f59e0b;
-  --color-cosmic-white: #f0f0f5;
-  --color-cosmic-gray: #9ca3af;
-  --color-cosmic-muted: #6b7280;
-  --color-surface-dark: #141420;
-  --color-surface-card: #1a1a2e;
-  --color-surface-hover: #22223a;
-  --color-accent-glow: rgba(59, 130, 246, 0.15);
+  /* ── User Defined Color Palette ── */
+  --color-azul-claro-1: #314573;
+  --color-azul-claro-2: #7190b6;
+  
+  --color-azul-oscuro-1: #272f58;
+  --color-azul-oscuro-2: #2d2f61;
+  --color-azul-negro: #131440;
+  --color-azul-marino: #2b295f;
+  
+  --color-negro: #000000;
+  --color-blanco: #ffffff;
+
+  /* ── Semantic Mappings to Avoid Breaking Existing Code ── */
+  --color-space-black: var(--color-azul-negro);
+  --color-space-dark: var(--color-azul-oscuro-1);
+  --color-space-deep: var(--color-azul-oscuro-2);
+  --color-nebula-purple: var(--color-azul-claro-1);
+  --color-nebula-blue: var(--color-azul-claro-2);
+  --color-nebula-cyan: var(--color-azul-claro-2);
+  --color-star-gold: var(--color-azul-claro-2);
+  --color-star-warm: var(--color-azul-claro-1);
+  --color-cosmic-white: var(--color-blanco);
+  --color-cosmic-gray: var(--color-azul-claro-2);
+  --color-cosmic-muted: var(--color-azul-claro-2);
+  --color-surface-dark: var(--color-azul-oscuro-1);
+  --color-surface-card: var(--color-azul-marino);
+  --color-surface-hover: var(--color-azul-claro-1);
+  --color-accent-glow: rgba(113, 144, 182, 0.15);
 
   /* ── Typography ── */
-  --font-heading: var(--font-geist-sans), "Inter", system-ui, sans-serif;
-  --font-body: var(--font-geist-sans), "Inter", system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), "JetBrains Mono", monospace;
+  --font-heading: var(--font-montserrat), "Montserrat", sans-serif;
+  --font-body: var(--font-poppins), "Poppins", sans-serif;
 }
 
 @theme inline {
   --color-background: var(--color-space-black);
   --color-foreground: var(--color-cosmic-white);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }
 
 /* ── Base Styles ── */
@@ -42,6 +54,11 @@ body {
   font-family: var(--font-body);
   overflow-x: hidden;
 }
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+}
+
 
 /* ── Scrollbar Styling ── */
 ::-webkit-scrollbar {
@@ -63,8 +80,8 @@ body {
 
 /* ── Selection Color ── */
 ::selection {
-  background: rgba(108, 63, 160, 0.4);
-  color: var(--color-cosmic-white);
+  background: rgba(49, 69, 115, 0.4);
+  color: var(--color-blanco);
 }
 
 /* ── Utility Animations ── */
