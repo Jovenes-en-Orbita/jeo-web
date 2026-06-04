@@ -30,7 +30,7 @@ export default async function Home({
       <MoonLayout />
       <ConstellationSection />
       <NewsSection />
-      <AstronomicalFactCard />
+      {/* <AstronomicalFactCard /> */}
       <PhotoGallerySection />
       <AboutSection />
       <ExploreMoreCards />

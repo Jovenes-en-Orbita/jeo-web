@@ -34,7 +34,7 @@ export default function Header() {
     () => [
       { label: t("universe"), href: "/universo" as const },
       { label: t("structures"), href: "/estructuras" as const },
-      { label: t("astronomicalData"), href: "/dato-astronomico" as const },
+      // { label: t("astronomicalData"), href: "/dato-astronomico" as const },
       {
         label: t("argentinaSpace"),
         href: "/explorar/argentina-espacio" as const,
@@ -66,11 +66,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-[#08090b]/95 backdrop-blur-md shadow-lg border-b border-zinc-800/80"
           : "bg-transparent border-b border-transparent"
-      }`}
+        }`}
     >
       {/* Red NASA line decoration at top */}
       <div className="h-[3px] w-full bg-[#e30613]" />

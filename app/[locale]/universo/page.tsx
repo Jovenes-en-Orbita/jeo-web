@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { ArrowLeft, Sparkles, Clock, Zap } from "lucide-react";
 
-import SpaceBackground from "../components/shared/SpaceBackground";
 import NebulaGlows from "../components/shared/NebulaGlows";
 
 export default async function UniversePage({
@@ -25,7 +24,6 @@ function UniverseContent() {
     <div className="min-h-screen bg-[#050508] text-white">
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <SpaceBackground />
         
         {/* Nebula Glows */}
         <NebulaGlows opacity="opacity-50" />

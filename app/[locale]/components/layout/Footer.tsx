@@ -1,6 +1,5 @@
 "use client";
 
-import SpaceBackground from "../shared/SpaceBackground";
 import NebulaGlows from "../shared/NebulaGlows";
 import FooterAbout from "./footer/FooterAbout";
 import ContactForm from "./footer/ContactForm";
@@ -12,8 +11,7 @@ export default function Footer() {
       id="contacto"
       className="relative w-full overflow-hidden bg-[#050508]"
     >
-      {/* Space Background Effect */}
-      <SpaceBackground id="footer-particles" />
+      {/* Space Background Effect removed */}
 
       {/* Decorative Nebula Glows */}
       <NebulaGlows opacity="opacity-50" />
