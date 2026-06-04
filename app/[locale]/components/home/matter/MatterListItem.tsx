@@ -30,21 +30,21 @@ export default function MatterListItem({
   return (
     <button
       onClick={onClick}
-      className="w-full text-left group flex items-start gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-300"
+      className="w-full text-left group flex items-start gap-4 p-4 rounded-none bg-zinc-950/50 border border-zinc-800 hover:bg-zinc-900/40 hover:border-zinc-700 transition-all duration-300 cursor-pointer"
       style={{ animationDelay: `${index * 100}ms` }}
     >
-      <div className="relative h-16 w-16 rounded-full flex-shrink-0 ring-2 ring-white/5 group-hover:ring-purple-500/30 transition-all overflow-hidden">
+      <div className="relative h-16 w-16 rounded-full flex-shrink-0 ring-2 ring-zinc-800 group-hover:ring-nasa-red/50 transition-all overflow-hidden bg-black">
         <MatterOrb matterKey={matter.key} size={64} />
       </div>
       <div className="flex-1 min-w-0">
-        <h4 className="text-sm font-semibold text-white/90 group-hover:text-purple-300 transition-colors">
+        <h4 className="text-sm font-bold uppercase tracking-wider text-white/90 group-hover:text-nasa-red transition-colors font-heading">
           {t(`${matter.key}Title`)}
         </h4>
-        <p className="mt-1 text-xs text-white/40 leading-relaxed line-clamp-2">
+        <p className="mt-1 text-xs text-zinc-400 leading-relaxed line-clamp-2">
           {t(`${matter.key}Desc`)}
         </p>
       </div>
-      <span className="text-white/20 group-hover:text-white/50 transition-colors text-lg flex-shrink-0 mt-2">
+      <span className="text-zinc-600 group-hover:text-nasa-red transition-colors text-lg flex-shrink-0 mt-2 font-bold group-hover:translate-x-1 duration-300 transform">
         →
       </span>
     </button>

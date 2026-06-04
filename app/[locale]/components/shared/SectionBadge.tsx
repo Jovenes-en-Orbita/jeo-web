@@ -5,13 +5,13 @@ import type { ReactNode } from "react";
  * [text color, border color, background color]
  */
 const colorMap: Record<string, [string, string, string]> = {
-  blue:   ["text-blue-400",   "border-blue-500/20",   "bg-blue-500/5"],
-  purple: ["text-purple-400", "border-purple-500/20", "bg-purple-500/5"],
-  white:  ["text-white/40",   "border-white/10",      "bg-white/5"],
-  green:  ["text-green-400",  "border-green-500/20",  "bg-green-500/5"],
-  red:    ["text-red-400",    "border-red-500/20",    "bg-red-500/5"],
-  yellow: ["text-yellow-400", "border-yellow-500/20", "bg-yellow-500/5"],
-  cyan:   ["text-cyan-400",   "border-cyan-500/20",   "bg-cyan-500/5"],
+  blue:   ["text-nasa-red",   "border-nasa-red/25",   "bg-nasa-red/5"],
+  purple: ["text-nasa-red",   "border-nasa-red/25",   "bg-nasa-red/5"],
+  white:  ["text-white/60",   "border-white/15",      "bg-white/5"],
+  green:  ["text-emerald-400",  "border-emerald-500/20",  "bg-emerald-500/5"],
+  red:    ["text-nasa-red",    "border-nasa-red/20",    "bg-nasa-red/5"],
+  yellow: ["text-amber-400",  "border-amber-500/20",  "bg-amber-500/5"],
+  cyan:   ["text-nasa-red",   "border-nasa-red/20",   "bg-nasa-red/5"],
 };
 
 interface SectionBadgeProps {
@@ -23,14 +23,6 @@ interface SectionBadgeProps {
   className?: string;
 }
 
-/**
- * A small uppercase pill badge used as a section label.
- *
- * @example
- * ```tsx
- * <SectionBadge color="purple">{t("badge")}</SectionBadge>
- * ```
- */
 export default function SectionBadge({
   color = "blue",
   children,
@@ -40,7 +32,7 @@ export default function SectionBadge({
 
   return (
     <span
-      className={`inline-block text-[10px] tracking-[0.3em] uppercase font-medium mb-4 px-3 py-1 rounded-full border ${textColor} ${borderColor} ${bgColor} ${className}`}
+      className={`inline-block text-[9px] tracking-[0.35em] uppercase font-bold mb-4 px-3 py-1 border ${textColor} ${borderColor} ${bgColor} ${className}`}
     >
       {children}
     </span>

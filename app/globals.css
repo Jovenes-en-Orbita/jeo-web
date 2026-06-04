@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  /* ── User Defined Color Palette ── */
-  --color-azul-claro-1: #314573;
-  --color-azul-claro-2: #7190b6;
+  /* ── User Defined Color Palette (NASA Inspired) ── */
+  --color-nasa-red: #e30613;
+  --color-azul-claro-1: var(--color-nasa-red);
+  --color-azul-claro-2: #ffffff;
   
-  --color-azul-oscuro-1: #272f58;
-  --color-azul-oscuro-2: #2d2f61;
-  --color-azul-negro: #131440;
-  --color-azul-marino: #2b295f;
+  --color-azul-oscuro-1: #0f1013;
+  --color-azul-oscuro-2: #1c1d22;
+  --color-azul-negro: #000000;
+  --color-azul-marino: #121318;
   
   --color-negro: #000000;
   --color-blanco: #ffffff;
@@ -17,18 +18,18 @@
   --color-space-black: var(--color-azul-negro);
   --color-space-dark: var(--color-azul-oscuro-1);
   --color-space-deep: var(--color-azul-oscuro-2);
-  --color-nebula-purple: var(--color-azul-claro-1);
-  --color-nebula-blue: var(--color-azul-claro-2);
-  --color-nebula-cyan: var(--color-azul-claro-2);
-  --color-star-gold: var(--color-azul-claro-2);
-  --color-star-warm: var(--color-azul-claro-1);
+  --color-nebula-purple: var(--color-nasa-red);
+  --color-nebula-blue: #ffffff;
+  --color-nebula-cyan: var(--color-nasa-red);
+  --color-star-gold: var(--color-nasa-red);
+  --color-star-warm: var(--color-nasa-red);
   --color-cosmic-white: var(--color-blanco);
-  --color-cosmic-gray: var(--color-azul-claro-2);
-  --color-cosmic-muted: var(--color-azul-claro-2);
+  --color-cosmic-gray: #a1a1aa;
+  --color-cosmic-muted: #71717a;
   --color-surface-dark: var(--color-azul-oscuro-1);
   --color-surface-card: var(--color-azul-marino);
-  --color-surface-hover: var(--color-azul-claro-1);
-  --color-accent-glow: rgba(113, 144, 182, 0.15);
+  --color-surface-hover: var(--color-azul-oscuro-2);
+  --color-accent-glow: rgba(227, 6, 19, 0.15);
 
   /* ── Typography ── */
   --font-heading: var(--font-montserrat), "Montserrat", sans-serif;
@@ -41,6 +42,7 @@
   --font-sans: var(--font-body);
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
+  --color-nasa-red: var(--color-nasa-red);
 }
 
 /* ── Base Styles ── */

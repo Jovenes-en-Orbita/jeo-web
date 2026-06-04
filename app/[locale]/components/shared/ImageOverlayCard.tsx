@@ -56,18 +56,18 @@ export default function ImageOverlayCard({
   wrapperProps = {},
   className = "",
   imageClassName = "brightness-50 group-hover:brightness-[0.6]",
-  overlayGradient = "bg-gradient-to-t from-black/80 to-transparent",
+  overlayGradient = "bg-gradient-to-t from-black/90 to-transparent",
 }: ImageOverlayCardProps) {
   return (
     <Wrapper
-      className={`group relative overflow-hidden rounded-2xl border border-white/5 ${className}`}
+      className={`group relative overflow-hidden rounded-none border border-zinc-800 hover:border-zinc-700 transition-colors duration-300 ${className}`}
       {...wrapperProps}
     >
       <Image
         src={src}
         alt={alt}
         fill
-        className={`object-cover group-hover:scale-105 transition-all duration-500 ${imageClassName}`}
+        className={`object-cover group-hover:scale-105 transition-all duration-700 ${imageClassName}`}
       />
       <div className={`absolute inset-0 ${overlayGradient}`} />
 
@@ -76,7 +76,7 @@ export default function ImageOverlayCard({
         <div className="relative h-full">{children}</div>
       ) : label ? (
         <div className="absolute inset-0 flex items-end p-6">
-          <h3 className="text-sm font-bold text-white tracking-widest uppercase">
+          <h3 className="text-xs font-bold text-white tracking-widest uppercase border-l-2 border-nasa-red pl-2.5">
             {label}
           </h3>
         </div>

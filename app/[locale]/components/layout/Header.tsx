@@ -3,12 +3,11 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { usePathname } from "@/i18n/routing";
-
+import { usePathname, Link } from "@/i18n/routing";
+import { Menu, X, Globe } from "lucide-react";
+import PlanetLogo from "./components/header/PlanetLogo";
+import LanguageSwitcher from "./components/LanguageSwitcher";
 import MenuOverlay from "./components/header/MenuOverlay";
-import LeftSide from "./components/header/LeftSide";
-import CenterSide from "./components/header/CenterSide";
-import RightSide from "./components/header/RightSide";
 import { NavLink } from "./HeaderTypes";
 
 export default function Header() {
@@ -57,45 +56,74 @@ export default function Header() {
       { label: t("photoGallery"), href: "/#galeria" as const, isHash: true },
       { label: t("aboutUs"), href: "/#quienes-somos" as const, isHash: true },
     ],
-    [t],
+    [t]
   );
 
-  // Sections for the current page (anchor links)
-  const currentSections = useMemo(() => {
-    return allLinks.filter((link) => link.isHash);
-  }, [allLinks]);
-
-  // Global pages for the logo menu
-  const globalPages = useMemo(() => {
+  // Filter links for desktop horizontal header
+  const mainLinks = useMemo(() => {
     return allLinks.filter((link) => !link.isHash);
   }, [allLinks]);
 
-  // Split sections for flanking
-  const leftSections = currentSections.slice(0, 3);
-  const rightSections = currentSections.slice(3, 6);
-
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-6 px-4 pointer-events-none">
-      <motion.div
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        className={`pointer-events-auto relative flex items-center justify-between px-2 py-1.5 rounded-full border border-white/10 bg-[#0a0a0f]/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-all duration-500 ${isScrolled ? "scale-95 max-w-4xl" : "max-w-5xl"
-          } w-full`}
-      >
-        {/* Left Side: Contextual Links */}
-        <LeftSide sections={leftSections} />
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-[#08090b]/95 backdrop-blur-md shadow-lg border-b border-zinc-800/80"
+          : "bg-transparent border-b border-transparent"
+      }`}
+    >
+      {/* Red NASA line decoration at top */}
+      <div className="h-[3px] w-full bg-[#e30613]" />
 
-        {/* Center: Logo Button */}
-        <CenterSide isOpen={menuOpen} onClick={() => setMenuOpen(!menuOpen)} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        {/* Left Side: Brand Logo */}
+        <Link href="/" className="flex items-center gap-3 group focus:outline-none">
+          <div className="h-10 w-10 flex-shrink-0 transition-transform duration-500 group-hover:scale-105">
+            <PlanetLogo isOpen={menuOpen} isHovered={false} />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-sm font-black tracking-[0.25em] text-white uppercase font-heading group-hover:text-zinc-200 transition-colors">
+              JÓVENES EN ÓRBITA
+            </span>
+            <span className="text-[9px] font-bold tracking-[0.4em] text-[#e30613] uppercase -mt-0.5">
+              DIVULGACIÓN CIENTÍFICA
+            </span>
+          </div>
+        </Link>
 
-        {/* Right Side: Contextual Links + Language Switcher */}
-        <RightSide sections={rightSections} />
-      </motion.div>
+        {/* Center: Main Nav Links (Desktop) */}
+        <nav className="hidden lg:flex items-center gap-8">
+          {mainLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="text-xs font-bold tracking-widest uppercase text-white/80 hover:text-white transition-colors relative py-2 group"
+            >
+              {link.label}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#e30613] transition-all duration-300 group-hover:w-full" />
+            </Link>
+          ))}
+        </nav>
+
+        {/* Right Side: Actions (Desktop/Mobile) */}
+        <div className="flex items-center gap-4">
+          <LanguageSwitcher />
+
+          {/* Toggle Menu Button */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="p-2 rounded-md hover:bg-white/5 border border-white/10 hover:border-white/20 transition-all text-white focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
+      </div>
 
       {/* Global Menu Overlay */}
       <AnimatePresence>
         {menuOpen && (
-          <MenuOverlay links={globalPages} onClose={() => setMenuOpen(false)} />
+          <MenuOverlay links={allLinks} onClose={() => setMenuOpen(false)} />
         )}
       </AnimatePresence>
     </header>

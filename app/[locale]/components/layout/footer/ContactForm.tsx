@@ -61,11 +61,11 @@ export default function ContactForm() {
 
   return (
     <div className="relative">
-      <div className="rounded-2xl bg-white/3 backdrop-blur-sm border border-white/10 p-6 lg:p-8">
-        <h3 className="text-xl font-semibold text-white text-center mb-1">
+      <div className="rounded-none bg-zinc-950/60 border border-zinc-800 p-6 lg:p-8">
+        <h3 className="text-xl font-bold uppercase tracking-wider text-white text-center mb-1 font-heading">
           {t("formTitle")}
         </h3>
-        <p className="text-xs text-white/40 text-center mb-6">
+        <p className="text-xs text-zinc-400 text-center mb-6 tracking-wide">
           {t("formSubtitle")}
         </p>
 
@@ -117,7 +117,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-linear-to-r from-blue-600 to-purple-600 text-sm font-medium text-white hover:from-blue-500 hover:to-purple-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40"
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-none bg-nasa-red hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 text-xs font-bold uppercase tracking-widest text-white cursor-pointer"
             >
               <Send className="h-4 w-4" />
               {isSubmitting ? t("sending") : t("send")}
@@ -128,4 +128,3 @@ export default function ContactForm() {
     </div>
   );
 }
-

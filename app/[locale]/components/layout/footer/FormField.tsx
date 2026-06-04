@@ -27,19 +27,19 @@ export default function FormField({
   return (
     <div className="w-full">
       <div className="relative">
-        <Icon className={`absolute left-3 ${isTextArea ? 'top-3' : 'top-1/2 -translate-y-1/2'} h-4 w-4 text-white/20`} />
+        <Icon className={`absolute left-3 ${isTextArea ? 'top-3' : 'top-1/2 -translate-y-1/2'} h-4 w-4 text-zinc-500`} />
         <InputComponent
           {...register}
           type={!isTextArea ? type : undefined}
           placeholder={placeholder}
           rows={isTextArea ? rows : undefined}
-          className={`w-full pl-10 pr-4 py-3 rounded-lg bg-white/5 border border-white/10 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:border-transparent transition resize-none ${
-            error ? "border-red-500/50" : ""
+          className={`w-full pl-10 pr-4 py-3 rounded-none bg-black/40 border border-zinc-800 text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:ring-1 focus:ring-nasa-red focus:border-nasa-red transition resize-none ${
+            error ? "border-red-500" : ""
           }`}
         />
       </div>
       {error && (
-        <p className="text-red-400 text-xs mt-1">
+        <p className="text-red-500 text-xs mt-1 font-bold">
           {error.message}
         </p>
       )}

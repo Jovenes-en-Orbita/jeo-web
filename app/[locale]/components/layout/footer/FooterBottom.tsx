@@ -7,7 +7,7 @@ export default function FooterBottom() {
   const t = useTranslations("footer");
 
   return (
-    <div className="mt-16 pt-8 border-t border-white/5 text-center">
+    <div className="mt-16 pt-8 border-t border-zinc-800 text-center">
       <p className="text-xs text-white/30">
         {t("copyright", { year: new Date().getFullYear() })}
       </p>

@@ -36,20 +36,20 @@ export default function NewsSection() {
   const t = useTranslations("news");
 
   return (
-    <section id="noticias" className="py-24 lg:py-32 bg-[#050508]">
+    <section id="noticias" className="py-24 lg:py-32 bg-black border-t border-zinc-900">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <span className="inline-block text-[10px] tracking-[0.3em] uppercase text-blue-400 font-medium mb-4">
+            <span className="inline-block text-[10px] tracking-[0.3em] uppercase text-[#e30613] font-bold mb-4">
               {t("badge")}
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white uppercase font-heading">
               {t("title")}
             </h2>
           </div>
           <Link
             href="/noticias"
-            className="group flex items-center gap-2 text-sm font-medium text-white/40 hover:text-white transition-colors"
+            className="group flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-white/50 hover:text-white transition-colors"
           >
             {t("viewAll")}
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -61,7 +61,7 @@ export default function NewsSection() {
             <Link
               key={item.id}
               href={`/noticias/${item.slug}`}
-              className="group flex flex-col h-full bg-white/[0.02] border border-white/5 rounded-[2rem] overflow-hidden hover:bg-white/[0.04] hover:border-white/10 transition-all duration-300"
+              className="group flex flex-col h-full bg-zinc-950/40 border border-zinc-800 hover:bg-zinc-900/60 hover:border-zinc-700 transition-all duration-300"
             >
               <div className="relative aspect-video overflow-hidden">
                 <Image
@@ -69,27 +69,27 @@ export default function NewsSection() {
                   alt={item.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/10 text-[10px] font-bold text-white uppercase tracking-wider flex items-center gap-1.5">
-                    <Tag className="h-3 w-3 text-blue-400" />
+                  <span className="px-3 py-1 bg-black/85 backdrop-blur-sm border border-zinc-800 text-[10px] font-bold text-white uppercase tracking-wider flex items-center gap-1.5">
+                    <Tag className="h-3 w-3 text-[#e30613]" />
                     {item.category}
                   </span>
                 </div>
               </div>
 
-              <div className="flex-1 p-8 flex flex-col">
-                <div className="flex items-center gap-2 text-white/30 text-[10px] font-medium uppercase tracking-widest mb-4">
-                  <Calendar className="h-3.5 w-3.5" />
+              <div className="flex-1 p-6 flex flex-col">
+                <div className="flex items-center gap-2 text-zinc-500 text-[10px] font-bold uppercase tracking-wider mb-3">
+                  <Calendar className="h-3.5 w-3.5 text-zinc-600" />
                   {item.date}
                 </div>
-                <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors mb-4 line-clamp-2">
+                <h3 className="text-lg font-bold text-white group-hover:text-[#e30613] transition-colors mb-4 line-clamp-2 font-heading leading-snug">
                   {item.title}
                 </h3>
-                <div className="mt-auto flex items-center gap-2 text-sm font-bold text-blue-400 opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
+                <div className="mt-auto flex items-center gap-2 text-xs font-bold text-[#e30613] uppercase tracking-wider opacity-90 transition-all">
                   {t("readMore")}
-                  <ArrowRight className="h-4 w-4" />
+                  <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </Link>
