@@ -342,7 +342,24 @@
     "badge": "Noticias del Cosmos",
     "title": "Últimos Descubrimientos",
     "viewAll": "Ver todas las noticias",
-    "readMore": "Leer noticia completa"
+    "readMore": "Leer noticia completa",
+    "items": {
+      "1": {
+        "slug": "descubrimiento-exoplaneta-habitable",
+        "title": "Descubren exoplaneta en zona habitable",
+        "category": "Exoplanetas"
+      },
+      "2": {
+        "slug": "mision-artemis-luna",
+        "title": "Misión Artemis: Próximo paso hacia la Luna",
+        "category": "Exploración"
+      },
+      "3": {
+        "slug": "agujero-negro-centro-galactico",
+        "title": "Nuevas imágenes del agujero negro central",
+        "category": "Astrofísica"
+      }
+    }
   },
   "about": {
     "badge": "¿Quiénes Somos?",
@@ -362,6 +379,14 @@
     "description": "Desde la creación de la CONAE hasta las misiones SAOCOM y el proyecto del lanzador Tronador. Conoce la historia, el presente y el futuro del desarrollo tecnológico aeroespacial argentino.",
     "button": "Ver Misiones Argentinas",
     "imageAlt": "Argentina en el Espacio"
+  },
+  "contactSection": {
+    "badge": "CONTACTO",
+    "title": "Ponte en Órbita",
+    "description": "¿Tienes consultas sobre nuestras olimpiadas astronómicas, talleres de divulgación o reportes del sitio? Ponte en contacto con el equipo de Jóvenes en Órbita.",
+    "email": "contacto@jovenesenorbita.com",
+    "phone": "+54 (11) 5555-0199",
+    "location": "Buenos Aires, Argentina"
   },
   "newsDetail": {
     "back": "Volver a noticias",

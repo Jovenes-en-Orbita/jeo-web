@@ -65,14 +65,14 @@ export default function ContactForm() {
         <h3 className="text-xl font-bold uppercase tracking-wider text-white text-center mb-1 font-heading">
           {t("formTitle")}
         </h3>
-        <p className="text-xs text-zinc-400 text-center mb-6 tracking-wide">
+        <p className=" text-zinc-400 text-center mb-6 tracking-wide">
           {t("formSubtitle")}
         </p>
 
         {submitted ? (
-          <SuccessMessage 
-            title={t("successMessage")} 
-            subtext={t("successSubtext")} 
+          <SuccessMessage
+            title={t("successMessage")}
+            subtext={t("successSubtext")}
           />
         ) : (
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
@@ -117,7 +117,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-none bg-nasa-red hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 text-xs font-bold uppercase tracking-widest text-white cursor-pointer"
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-none bg-nasa-red hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300  font-bold uppercase tracking-widest text-white cursor-pointer"
             >
               <Send className="h-4 w-4" />
               {isSubmitting ? t("sending") : t("send")}

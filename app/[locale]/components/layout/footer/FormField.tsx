@@ -23,7 +23,7 @@ export default function FormField({
   rows = 4,
 }: FormFieldProps) {
   const InputComponent = isTextArea ? "textarea" : "input";
-  
+
   return (
     <div className="w-full">
       <div className="relative">
@@ -33,13 +33,12 @@ export default function FormField({
           type={!isTextArea ? type : undefined}
           placeholder={placeholder}
           rows={isTextArea ? rows : undefined}
-          className={`w-full pl-10 pr-4 py-3 rounded-none bg-black/40 border border-zinc-800 text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:ring-1 focus:ring-nasa-red focus:border-nasa-red transition resize-none ${
-            error ? "border-red-500" : ""
-          }`}
+          className={`w-full pl-10 pr-4 py-3 rounded-none bg-black/40 border border-zinc-800  text-white placeholder:text-zinc-500 focus:outline-none focus:ring-1 focus:ring-nasa-red focus:border-nasa-red transition resize-none ${error ? "border-red-500" : ""
+            }`}
         />
       </div>
       {error && (
-        <p className="text-red-500 text-xs mt-1 font-bold">
+        <p className="text-red-500  mt-1 font-bold">
           {error.message}
         </p>
       )}

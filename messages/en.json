@@ -342,7 +342,24 @@
     "badge": "Cosmos News",
     "title": "Latest Discoveries",
     "viewAll": "View all news",
-    "readMore": "Read full story"
+    "readMore": "Read full story",
+    "items": {
+      "1": {
+        "slug": "discovery-habitable-exoplanet",
+        "title": "Habitable zone exoplanet discovered",
+        "category": "Exoplanets"
+      },
+      "2": {
+        "slug": "artemis-mission-moon",
+        "title": "Artemis Mission: Next step to the Moon",
+        "category": "Exploration"
+      },
+      "3": {
+        "slug": "black-hole-galactic-center",
+        "title": "New images of the central black hole",
+        "category": "Astrophysics"
+      }
+    }
   },
   "about": {
     "badge": "Who We Are",
@@ -362,6 +379,14 @@
     "description": "From the creation of CONAE to the SAOCOM missions and the Tronador launcher project. Discover the history, present, and future of Argentine aerospace technology development.",
     "button": "View Argentine Missions",
     "imageAlt": "Argentina in Space"
+  },
+  "contactSection": {
+    "badge": "CONTACT",
+    "title": "Get in Orbit",
+    "description": "Do you have questions about our astronomy olympiads, outreach workshops, or site reports? Get in touch with the Jóvenes en Órbita team.",
+    "email": "contacto@jovenesenorbita.com",
+    "phone": "+54 (11) 5555-0199",
+    "location": "Buenos Aires, Argentina"
   },
   "newsDetail": {
     "back": "Back to news",
