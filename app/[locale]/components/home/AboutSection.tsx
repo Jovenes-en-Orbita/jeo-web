@@ -12,7 +12,7 @@ export default function AboutSection() {
     <section id="quienes-somos" className="py-24 lg:py-32 bg-[#0a0a0f] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
-      
+
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -31,7 +31,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">{t("missionTitle")}</h4>
-                  <p className="text-white/40 text-sm leading-relaxed">{t("missionContent")}</p>
+                  <p className="text-white/40  leading-relaxed">{t("missionContent")}</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -40,7 +40,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">{t("foundersTitle")}</h4>
-                  <p className="text-white/40 text-sm leading-relaxed">{t("foundersContent")}</p>
+                  <p className="text-white/40  leading-relaxed">{t("foundersContent")}</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -49,7 +49,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">{t("partnersTitle")}</h4>
-                  <p className="text-white/40 text-sm leading-relaxed">{t("partnersContent")}</p>
+                  <p className="text-white/40  leading-relaxed">{t("partnersContent")}</p>
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent" />
               <div className="absolute bottom-12 left-12 right-12">
                 <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10">
-                  <p className="text-white/80 font-medium italic">
+                  <p className="text-white/80  italic">
                     &quot;{t("quote")}&quot;
                   </p>
                 </div>

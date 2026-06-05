@@ -96,7 +96,7 @@ export default async function EstructurasPage({
               <p className="text-sm text-white/40 leading-relaxed">
                 {structureKeys[i] ? t(`items.${structureKeys[i]}.description` as const) : structure.description}
               </p>
-              <span className="inline-flex items-center gap-1 mt-3 text-xs font-medium text-blue-400/60 group-hover:text-blue-400 transition-colors">
+              <span className="inline-flex items-center gap-1 mt-3 text-xs  text-blue-400/60 group-hover:text-blue-400 transition-colors">
                 {t("readMore")}
               </span>
             </div>

@@ -59,7 +59,8 @@
     "discover": "Descubrir",
     "cosmosView": "Vista del cosmos",
     "previous": "Anterior",
-    "next": "Siguiente"
+    "next": "Siguiente",
+    "mission": "Misión Destacada"
   },
   "universe": {
     "badge": "Origen del cosmos",
@@ -354,6 +355,13 @@
     "partnersTitle": "Alianzas",
     "partnersContent": "Colaboramos con instituciones educativas y observatorios para garantizar la veracidad de nuestra información.",
     "quote": "El universo está ahí fuera, esperando a que lo descubras."
+  },
+  "homeSpaceSection": {
+    "badge": "DESARROLLO NACIONAL",
+    "title": "Argentina en el Espacio",
+    "description": "Desde la creación de la CONAE hasta las misiones SAOCOM y el proyecto del lanzador Tronador. Conoce la historia, el presente y el futuro del desarrollo tecnológico aeroespacial argentino.",
+    "button": "Ver Misiones Argentinas",
+    "imageAlt": "Argentina en el Espacio"
   },
   "newsDetail": {
     "back": "Volver a noticias",

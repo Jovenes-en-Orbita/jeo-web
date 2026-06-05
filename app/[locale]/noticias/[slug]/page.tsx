@@ -68,7 +68,7 @@ function NewsDetailContent({ slug }: { slug: string }) {
               </div>
               <div>
                 <span className="block text-xs text-white/40 uppercase tracking-widest">{t("author")}</span>
-                <span className="text-sm font-medium">{news.author}</span>
+                <span className="text-sm ">{news.author}</span>
               </div>
             </div>
             <button className="p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors text-white/60 hover:text-white">

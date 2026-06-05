@@ -67,7 +67,7 @@ export default function MatterDetailModal({
                     <span className="block text-[10px] uppercase text-white/30 mb-1">
                       {t("composition")}
                     </span>
-                    <span className="text-sm text-white font-medium">
+                    <span className="text-sm text-white ">
                       {t(`${matter.key}Percent`)}
                     </span>
                   </div>

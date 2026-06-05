@@ -28,7 +28,7 @@ export default function UniverseInfoSection() {
           </p>
           <Link
             href="/universo"
-            className="inline-flex items-center gap-2 mt-8 text-sm font-medium text-blue-400 hover:text-blue-300 group transition-colors"
+            className="inline-flex items-center gap-2 mt-8 text-sm  text-blue-400 hover:text-blue-300 group transition-colors"
           >
             {t("discoverMore")}
             <span className="inline-block transition-transform group-hover:translate-x-1">

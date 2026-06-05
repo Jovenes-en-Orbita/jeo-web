@@ -48,7 +48,7 @@ export default function MoonLayout() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-3">
                   <span className="text-[10px] text-white/40">{moon.rank}.</span>
-                  <p className="text-sm font-medium text-white">{t(moon.key)}</p>
+                  <p className="text-sm  text-white">{t(moon.key)}</p>
                 </div>
               </div>
             </button>
@@ -88,7 +88,7 @@ export default function MoonLayout() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-3">
                   <span className="text-[10px] text-white/40">{moon.rank}.</span>
-                  <p className="text-sm font-medium text-white">{t(moon.key)}</p>
+                  <p className="text-sm  text-white">{t(moon.key)}</p>
                 </div>
               </div>
             </button>

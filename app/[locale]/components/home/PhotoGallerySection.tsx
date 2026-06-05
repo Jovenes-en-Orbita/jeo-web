@@ -34,7 +34,7 @@ export default function PhotoGallerySection() {
             </p>
             <Link
               href="/galeria"
-              className="inline-flex items-center gap-2 mt-8 text-sm font-medium text-cyan-400 hover:text-cyan-300 group transition-colors"
+              className="inline-flex items-center gap-2 mt-8 text-sm lg:text-base text-cyan-400 hover:text-cyan-300 group transition-colors"
             >
               {t("viewFull")}
               <span className="inline-block transition-transform group-hover:translate-x-1">

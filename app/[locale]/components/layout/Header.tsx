@@ -10,6 +10,10 @@ import SearchBar from "./components/header/SearchBar";
 import DropdownMenu from "./components/header/DropdownMenu";
 import type { DropdownItem } from "./components/header/DropdownMenu";
 import MobileMenu from "./components/header/MobileMenu";
+import { LogoLetras } from "../shared/Icons";
+
+
+
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,7 +38,6 @@ export default function Header() {
   // Cosmos dropdown items
   const cosmosItems: DropdownItem[] = useMemo(
     () => [
-      { label: t("home"), href: "/", desc: t("homeDesc") },
       { label: t("researchTopics"), href: "/temas", desc: t("researchTopicsDesc") },
       { label: t("universe"), href: "/universo", desc: t("universeDesc") },
       { label: t("solarSystem"), href: "/sistema-solar", desc: t("solarSystemDesc") },
@@ -57,29 +60,23 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-[#08090b]/95 backdrop-blur-md shadow-lg border-b border-zinc-800/80"
-          : "bg-transparent border-b border-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-[#08090b]/95 backdrop-blur-md shadow-lg border-b border-zinc-800/80"
+        : "bg-transparent border-b border-transparent"
+        }`}
     >
       {/* Red NASA line decoration at top */}
       <div className="h-[3px] w-full bg-[#e30613]" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
         {/* Left: Search */}
         <div className="flex-shrink-0">
           <SearchBar />
         </div>
 
         {/* Center: Logo */}
-        <Link href="/" className="flex flex-col group focus:outline-none flex-shrink-0">
-          <span className="text-sm font-black tracking-[0.25em] text-white uppercase font-heading group-hover:text-zinc-200 transition-colors">
-            JÓVENES EN ÓRBITA
-          </span>
-          <span className="text-[9px] font-bold tracking-[0.4em] text-[#e30613] uppercase -mt-0.5">
-            DIVULGACIÓN CIENTÍFICA
-          </span>
+        <Link href="/" className="flex items-center group focus:outline-none flex-shrink-0" aria-label="Jóvenes en Órbita">
+          <LogoLetras className="h-16 w-auto text-white group-hover:text-zinc-200 transition-all duration-300" />
         </Link>
 
         {/* Right: Dropdowns + Language */}

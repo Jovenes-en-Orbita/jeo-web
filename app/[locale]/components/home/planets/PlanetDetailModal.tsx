@@ -59,7 +59,7 @@ export default function PlanetDetailModal({
                   <h3 className="text-3xl font-bold text-white mb-1">
                     {t(planet.key)}
                   </h3>
-                  <span className="text-xs uppercase tracking-[0.2em] text-blue-400 font-medium">
+                  <span className="text-xs uppercase tracking-[0.2em] text-blue-400 ">
                     {t("planetType")}
                   </span>
                 </div>

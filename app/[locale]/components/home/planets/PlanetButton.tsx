@@ -34,7 +34,7 @@ export default function PlanetButton({ planet, onClick, t }: PlanetButtonProps) 
         />
         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
       </div>
-      <span className="text-xs sm:text-sm font-medium text-white/50 group-hover:text-white transition-colors tracking-wide">
+      <span className="text-xs sm:text-sm  text-white/50 group-hover:text-white transition-colors tracking-wide">
         {t(planet.key)}
       </span>
     </button>

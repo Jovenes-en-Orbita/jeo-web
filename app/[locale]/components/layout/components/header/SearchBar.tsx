@@ -97,7 +97,7 @@ export default function SearchBar() {
     <div ref={containerRef} className="relative">
       {/* Desktop search input */}
       <div className="hidden md:flex items-center relative">
-        <Search className="absolute left-3 h-3.5 w-3.5 text-zinc-500 pointer-events-none" />
+        <Search className="absolute left-3.5 h-4 w-4 text-zinc-500 pointer-events-none" />
         <input
           ref={inputRef}
           type="text"
@@ -105,14 +105,14 @@ export default function SearchBar() {
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder={t("searchPlaceholder")}
-          className="w-48 lg:w-56 pl-9 pr-8 py-1.5 bg-white/5 border border-white/10 rounded-full text-[11px] text-white placeholder:text-zinc-500 focus:outline-none focus:border-white/25 focus:bg-white/8 transition-all duration-200"
+          className="w-48 lg:w-56 pl-10 pr-8 py-2 bg-white/5 border border-white/10 rounded-full text-white placeholder:text-zinc-500 focus:outline-none focus:border-white/25 focus:bg-white/8 transition-all duration-200"
         />
         {query && (
           <button
             onClick={() => { setQuery(""); inputRef.current?.focus(); }}
-            className="absolute right-2.5 p-0.5 text-zinc-500 hover:text-white transition-colors cursor-pointer"
+            className="absolute right-3 p-0.5 text-zinc-500 hover:text-white transition-colors cursor-pointer"
           >
-            <X className="h-3 w-3" />
+            <X className="h-3.5 w-3.5" />
           </button>
         )}
       </div>
@@ -145,7 +145,7 @@ export default function SearchBar() {
                 onChange={(e) => setQuery(e.target.value)}
                 onFocus={() => setIsFocused(true)}
                 placeholder={t("searchPlaceholder")}
-                className="w-full pl-9 pr-8 py-2.5 bg-zinc-950 border border-zinc-800 text-xs text-white placeholder:text-zinc-500 focus:outline-none focus:border-white/25 transition-all duration-200"
+                className="w-full pl-9 pr-8 py-2.5 bg-zinc-950 border border-zinc-800  text-white placeholder:text-zinc-500 focus:outline-none focus:border-white/25 transition-all duration-200"
               />
             </div>
           </motion.div>
@@ -167,21 +167,21 @@ export default function SearchBar() {
 
             {results.length > 0 ? (
               <div className="p-2">
-                <span className="block px-3 py-1.5 text-[9px] font-bold tracking-[0.3em] uppercase text-zinc-600">
+                <span className="block px-3 py-1.5  font-bold tracking-[0.3em] uppercase text-zinc-600">
                   {t("searchResults")} ({results.length})
                 </span>
                 {results.map((item, i) => {
                   const content = (
                     <div className="group block px-3 py-2.5 hover:bg-white/5 transition-all duration-200 cursor-pointer">
                       <div className="flex items-center justify-between">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-white/90 group-hover:text-[#e30613] transition-colors">
+                        <span className="font-bold uppercase tracking-wider text-white/90 group-hover:text-[#e30613] transition-colors">
                           {t(item.titleKey)}
                         </span>
-                        <span className="text-[9px] font-bold tracking-wider uppercase text-zinc-700 px-1.5 py-0.5 border border-zinc-800 rounded">
+                        <span className=" font-bold tracking-wider uppercase text-zinc-700 px-1.5 py-0.5 border border-zinc-800 rounded">
                           {item.category === "cosmos" ? t("cosmos") : item.category === "multimedia" ? t("multimedia") : "General"}
                         </span>
                       </div>
-                      <p className="text-[10px] text-zinc-500 mt-0.5 font-light leading-relaxed">
+                      <p className=" text-zinc-500 mt-0.5 font-light leading-relaxed">
                         {t(item.descKey)}
                       </p>
                     </div>

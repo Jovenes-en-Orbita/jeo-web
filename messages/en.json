@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Jovenes en Orbita | Explore the Cosmos",
-    "titleTemplate": "%s | Jovenes en Orbita",
+    "title": "Jóvenes En Orbita | Explore the Cosmos",
+    "titleTemplate": "%s | Jóvenes En Orbita",
     "description": "Discover the mysteries of the universe: from the composition of dark matter to constellations."
   },
   "nav": {
@@ -37,7 +37,7 @@
     "noResults": "No results found",
     "searchResults": "Results",
     "cosmicStructures": "Cosmic Structures",
-    "homeDesc": "JEO homepage — Youth in Orbit",
+    "homeDesc": "JEO homepage — Jóvenes En Orbita",
     "researchTopicsDesc": "Scientific missions and outreach topics",
     "universeDesc": "Origin of the cosmos, dark matter and light",
     "solarSystemDesc": "Exploration of planets and natural satellites",
@@ -46,20 +46,21 @@
     "newsletterDesc": "Subscribe to receive cosmos updates",
     "eBooksDesc": "Digital reading material about astronomy",
     "socialMediaDesc": "Follow us on social media",
-    "aboutJEODesc": "Meet the Youth in Orbit team",
+    "aboutJEODesc": "Meet the Jóvenes En Orbita team",
     "galleryDesc": "High resolution images of the cosmos",
     "newsDesc": "Discoveries and press releases",
     "argentineSpaceDesc": "National aerospace history",
     "observeSkyDesc": "Practical guide to astrotourism and maps"
   },
   "hero": {
-    "title1": "YOUTH",
-    "title2": "IN ORBIT",
+    "title1": "Jóvenes",
+    "title2": "En Orbita",
     "subtitle": "Explore the mysteries of the cosmos, from the smallest particles to the largest structures in the universe.",
     "discover": "Discover",
     "cosmosView": "Cosmos view",
     "previous": "Previous",
-    "next": "Next"
+    "next": "Next",
+    "mission": "Featured Mission"
   },
   "universe": {
     "badge": "Origin of the cosmos",
@@ -174,7 +175,7 @@
     "olympics": "Olympics"
   },
   "footer": {
-    "aboutText1": "The \"Jovenes en Orbita\" website was designed to teach the public about science, specifically in the area of knowledge about the cosmos, its composition, origin, and structures present in it. Here, you will find vital information about a wide variety of celestial bodies, from their origin, evolution, and end of their existence, to phenomena present both in our daily lives and billions of light-years away.",
+    "aboutText1": "The \"Jóvenes En Orbita\" website was designed to teach the public about science, specifically in the area of knowledge about the cosmos, its composition, origin, and structures present in it. Here, you will find vital information about a wide variety of celestial bodies, from their origin, evolution, and end of their existence, to phenomena present both in our daily lives and billions of light-years away.",
     "aboutText2": "The website was created to be an entertaining way to learn about the nature of everything that existed, exists, and will exist. It also provides several sources of information if you are interested in learning in person about this field of science.",
     "weeklyNote": "The astronomical fact will be updated every week with new and varied information.",
     "formTitle": "Send your inquiry",
@@ -188,7 +189,7 @@
     "message": "Message",
     "sending": "Sending...",
     "send": "Send",
-    "copyright": "© {year} Jovenes en Orbita (Jeo). Made with love for the cosmos.",
+    "copyright": "© {year} Jóvenes En Orbita (Jeo). Made with love for the cosmos.",
     "firstNameRequired": "First name is required",
     "lastNameRequired": "Last name is required",
     "emailInvalid": "Invalid email address",
@@ -345,7 +346,7 @@
   },
   "about": {
     "badge": "Who We Are",
-    "title": "Jovenes en Orbita",
+    "title": "Jóvenes En Orbita",
     "description": "We are a platform dedicated to scientific and astronomical outreach, born with the mission of bringing the cosmos closer to new generations in an interactive and modern way.",
     "missionTitle": "Our Mission",
     "missionContent": "To inspire curiosity about the universe through cutting-edge educational technology and rigorous scientific content.",
@@ -354,6 +355,13 @@
     "partnersTitle": "Partnerships",
     "partnersContent": "We collaborate with educational institutions and observatories to ensure the accuracy of our information.",
     "quote": "The universe is out there, waiting for you to discover it."
+  },
+  "homeSpaceSection": {
+    "badge": "NATIONAL DEVELOPMENT",
+    "title": "Argentina in Space",
+    "description": "From the creation of CONAE to the SAOCOM missions and the Tronador launcher project. Discover the history, present, and future of Argentine aerospace technology development.",
+    "button": "View Argentine Missions",
+    "imageAlt": "Argentina in Space"
   },
   "newsDetail": {
     "back": "Back to news",

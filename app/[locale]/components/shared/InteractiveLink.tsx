@@ -36,7 +36,7 @@ export default function InteractiveLink({
   showArrow = true,
   icon,
 }: InteractiveLinkProps) {
-  const baseClasses = "inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 transition-all group";
+  const baseClasses = "inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-white  hover:bg-white/10 transition-all group";
 
   return (
     <Link

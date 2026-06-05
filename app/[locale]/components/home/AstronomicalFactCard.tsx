@@ -56,7 +56,7 @@ export default function AstronomicalFactCard() {
           <div className="mt-6 flex flex-col gap-2">
             <Link
               href="/dato-astronomico"
-              className="text-sm font-medium text-yellow-400 hover:text-yellow-300 underline underline-offset-4 decoration-yellow-400/30 hover:decoration-yellow-400 transition-all"
+              className="text-sm  text-yellow-400 hover:text-yellow-300 underline underline-offset-4 decoration-yellow-400/30 hover:decoration-yellow-400 transition-all"
             >
               {t("moreInfo")}
             </Link>

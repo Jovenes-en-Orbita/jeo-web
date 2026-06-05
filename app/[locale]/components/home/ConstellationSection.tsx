@@ -40,8 +40,8 @@ export default function ConstellationSection() {
         <div className="overflow-hidden cursor-grab active:cursor-grabbing" ref={emblaRef}>
           <div className="flex gap-6 px-4">
             {constellationItems.map((item, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="flex-[0_0_280px] sm:flex-[0_0_350px] min-w-0"
               >
                 <div className="group relative aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 transition-all duration-500 hover:border-cyan-500/30">
@@ -68,7 +68,7 @@ export default function ConstellationSection() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8 mt-12 flex justify-center lg:justify-start">
         <Link
           href="/constelaciones"
-          className="inline-flex items-center gap-2 text-sm font-medium text-cyan-400 hover:text-cyan-300 group transition-colors"
+          className="inline-flex items-center gap-2 text-sm  text-cyan-400 hover:text-cyan-300 group transition-colors"
         >
           {t("explore")}
           <span className="inline-block transition-transform group-hover:translate-x-1">

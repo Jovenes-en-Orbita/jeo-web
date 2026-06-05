@@ -31,8 +31,8 @@ export default function HeroContent({
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         className="pointer-events-auto max-w-xl sm:max-w-2xl bg-black/75 backdrop-blur-md border-l-4 border-[#e30613] p-8 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
       >
-        <span className="inline-block text-[10px] tracking-[0.3em] font-bold text-[#e30613] uppercase mb-4">
-          MISIÓN DESTACADA
+        <span className="inline-block tracking-[0.3em] font-bold text-[#e30613] uppercase mb-4">
+          {t("mission")}
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white uppercase leading-tight font-heading">
           {title1 || t("title1")}{" "}
@@ -46,7 +46,7 @@ export default function HeroContent({
         <div className="mt-8">
           <a
             href={scrollId}
-            className="inline-flex items-center gap-3 px-6 py-3 border border-white/20 hover:border-white bg-transparent hover:bg-white text-white hover:text-black font-bold text-xs uppercase tracking-widest transition-all duration-300 group"
+            className="inline-flex items-center gap-3 px-6 py-3 border border-white/20 hover:border-white bg-transparent hover:bg-white text-white hover:text-black font-bold  uppercase tracking-widest transition-all duration-300 group"
           >
             {discoverText || t("discover")}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
