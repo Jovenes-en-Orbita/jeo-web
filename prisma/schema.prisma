@@ -9,11 +9,15 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(uuid())
-  email     String   @unique
-  name      String?
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
+  id           String   @id @default(uuid())
+  email        String   @unique
+  name         String?
+  passwordHash String?  @map("password_hash")
+  role         String   @default("USER") // "ADMIN" or "USER"
+  department   String?  // Alianzas, Gestión de Proyectos, Gestión de Redes Sociales, etc.
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+  posts        AstronomicalPost[]
 
   @@map("users")
 }
@@ -46,6 +50,8 @@ model AstronomicalPost {
   category    String
   publishDate DateTime @default(now()) @map("publish_date")
   createdAt   DateTime @default(now()) @map("created_at")
+  authorId    String?  @map("author_id")
+  author      User?    @relation(fields: [authorId], references: [id])
 
   @@map("astronomical_posts")
 }
